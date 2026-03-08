@@ -3,65 +3,76 @@
 <head>
   <meta charset=\"UTF-8\">
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-  <title>Ayman Fostok - Portfolio</title>
+  <title>Ayman Fostok - Cybersecurity Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
-    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 100px 20px; }
-    h1 { font-size: 3em; margin: 0; }
-    .btn { background: #ff6b6b; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2em; text-decoration: none; display: inline-block; margin-top: 20px; }
-    section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; }
+    header { height: 100vh; background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; }
+    header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iODAiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+PGltZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjgwIiBzcmM9ImRhdGE6aW1hZ2Uv c3ZnK2Jhc2U2NCx...') no-repeat center/cover; opacity: 0.1; animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem; animation: fadeInUp 1s ease; }
+    p { font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9; animation: fadeInUp 1s ease 0.2s both; }
+    .btn { background: linear-gradient(45deg, #ff6b6b, #4ecdc4); padding: 1rem 2rem; border: none; border-radius: 50px; color: white; font-size: 1.2rem; cursor: pointer; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; animation: fadeInUp 1s ease 0.4s both; }
+    .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255,107,107,0.4); }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    section { padding: 80px 20px; max-width: 1200px; margin: auto; }
+    h2 { font-size: 3rem; text-align: center; margin-bottom: 3rem; background: linear-gradient(45deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .projects { background: #f8f9fa; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
-    form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
-    input, textarea { padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; }
-    button[type=submit] { background: #667eea; color: white; border: none; padding: 15px; border-radius: 5px; font-size: 1.1em; cursor: pointer; }
-    @media (max-width: 768px) { h1 { font-size: 2em; } header { padding: 60px 20px; } }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+    .card { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.2); }
+    .card h3 { color: #667eea; margin-bottom: 1rem; }
+    form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 1.5rem; }
+    input, textarea { padding: 1rem; border: 2px solid #eee; border-radius: 10px; font-size: 1rem; transition: border 0.3s; }
+    input:focus, textarea:focus { outline: none; border-color: #667eea; }
+    button[type=\"submit\"] { background: linear-gradient(45deg, #667eea, #764ba2); color: white; border: none; padding: 1rem; border-radius: 10px; font-size: 1.1rem; cursor: pointer; transition: transform 0.3s; }
+    button[type=\"submit\"]:hover { transform: scale(1.05); }
+    @media (max-width: 768px) { section { padding: 40px 20px; } h2 { font-size: 2rem; } }
   </style>
 </head>
 <body>
   <header>
     <h1>Ayman Fostok</h1>
-    <p>Cybersecurity Entrepreneur | OSINT Expert</p>
-    <a href=\"#contact\" class=\"btn\">Contact Me</a>
+    <p>Cybersecurity Entrepreneur | OSINT Specialist | Innovator</p>
+    <a href=\"#contact\" class=\"btn\">Let's Connect</a>
   </header>
   <section class=\"about\">
-    <h2>About</h2>
-    <p>Founder of PistaSecure, specializing in cybersecurity, OSINT, investigations, and business operations. Building tools to fight fraud and scams.</p>
+    <h2>About Me</h2>
+    <p style=\"font-size: 1.2rem; text-align: center; max-width: 800px; margin: auto;\">Founder of PistaSecure, passionate about fighting cybercrime through AI-driven tools. Expertise in OSINT, investigations, and scalable business operations. Building the future of security.</p>
   </section>
   <section class=\"projects\">
-    <h2>Projects</h2>
+    <h2>Featured Projects</h2>
     <div class=\"grid\">
       <div class=\"card\">
         <h3>PistaSecure</h3>
-        <p>AI-powered IP threat scanner and fraud detection platform.</p>
+        <p>AI-powered platform for IP threat scanning, fraud detection, and phishing analysis. Protecting users from scams worldwide.</p>
       </div>
       <div class=\"card\">
         <h3>StafficMedia</h3>
-        <p>SMM agency delivering growth through social media services.</p>
+        <p>SMM agency delivering explosive growth via targeted social media campaigns and analytics-driven strategies.</p>
       </div>
       <div class=\"card\">
         <h3>OpenClaw AI</h3>
-        <p>Personal AI assistant for automation and intel.</p>
+        <p>Personal AI assistant for automation, intel gathering, and seamless workflow integration.</p>
       </div>
     </div>
   </section>
   <section id=\"contact\" class=\"contact\">
-    <h2>Contact</h2>
-    <form id=\"form\">
+    <h2>Get In Touch</h2>
+    <form id=\"contactForm\">
       <input type=\"text\" placeholder=\"Your Name\" required>
       <input type=\"email\" placeholder=\"Your Email\" required>
-      <textarea rows=\"5\" placeholder=\"Your Message\" required></textarea>
+      <textarea rows=\"6\" placeholder=\"Tell me about your project or how I can help...\" required></textarea>
       <button type=\"submit\">Send Message</button>
     </form>
   </section>
   <script>
-    document.querySelector('.btn').addEventListener('click', () => document.querySelector('#contact').scrollIntoView({behavior: 'smooth'}));
-    document.getElementById('form').addEventListener('submit', e => {
+    document.querySelector('.btn').onclick = () => document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+    document.getElementById('contactForm').onsubmit = e => {
       e.preventDefault();
-      alert('Thanks! Message sent (demo).');
+      alert('Message sent successfully! (Demo mode)');
       e.target.reset();
-    });
+    };
   </script>
 </body>
 </html>
