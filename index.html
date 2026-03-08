@@ -3,218 +3,400 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayman Fostok | Luxury Cybersecurity Portfolio</title>
+  <title>Ayman Fostok | Elite Cybersecurity Visionary</title>
+  <meta name="description" content="Cybersecurity Entrepreneur | OSINT Master | AI Pioneer. Luxury portfolio of cutting-edge projects in threat hunting, automation, and digital defense.">
+  <meta property="og:title" content="Ayman Fostok | Elite Cybersecurity Portfolio">
+  <meta property="og:description" content="Transforming cyber defense with AI and OSINT. Featured: PistaSecure, OpenClaw AI.">
+  <meta property="og:image" content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MzAiIHZpZXdCb3g9IjAgMCAxMjAwIDYzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNjAwIiBjeT0iMzE1IiByPSIyMDAiIGZpbGw9IiM2NjdlZWEiLz4KPGNpcmNsZSBjeD0iNjAwIiBjeT0iMzE1IiByPSIxNzUiIGZpbGw9IiNmZmYiLz4KPHRleHQgeD0iNjAwIiB5PSIzNDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0OCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QVlNQU4KPC90ZXh0Pgo8L3N2Zz4K">
+  <link rel="canonical" href="https://fostokayman07-ui.github.io/ai/">
+  <!-- CDNs -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- PWA -->
+  <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiQXltYW4gRm9zdG9rIFBvcnRmb2xpbzoiLCJzaG9ydF9uYW1lIjoiQVYiLCJpY29uc19uZXh0IjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NC...">
+  <meta name="theme-color" content="#667eea">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
     body { font-family: 'Inter', sans-serif; }
-    .gradient-hero { background: radial-gradient(ellipse at bottom, #1e3c72 0%, #2a5298 50%, #0f3460 100%); }
-    .glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); }
-    .neon { box-shadow: 0 0 20px rgba(102,126,234,0.5); }
-    .parallax { transition: transform 0.1s; }
+    .luxury-gradient { background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 30%, #16213e 70%, #0f0f23 100%); }
+    .glassmorphism { background: rgba(255,255,255,0.05); backdrop-filter: blur(25px); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    .neon-glow { box-shadow: 0 0 30px rgba(102,126,234,0.6), inset 0 0 20px rgba(102,126,234,0.2); }
+    .gold-accent { background: linear-gradient(45deg, #ffd700, #ffed4e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .parallax-bg { will-change: transform; }
+    .morph-text { filter: drop-shadow(0 0 10px #667eea); }
+    #hero-canvas { position: absolute; top: 0; left: 0; z-index: 1; }
+    .hero-content { z-index: 2; position: relative; }
+    .floating-card { animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+    .matrix-bg { position: fixed; top: 0; left: 0; z-index: -1; opacity: 0.1; }
   </style>
 </head>
-<body class="bg-gray-900 text-white overflow-x-hidden">
+<body class="luxury-gradient text-white overflow-x-hidden">
+  <!-- Matrix Rain BG -->
+  <canvas id="matrix-bg" class="matrix-bg" width="1920" height="1080"></canvas>
+  
   <!-- Navbar -->
-  <nav class="fixed top-0 w-full z-50 glass px-8 py-4">
+  <nav class="fixed top-0 w-full z-50 glassmorphism px-8 py-6 transition-all duration-500 backdrop-blur-xl">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">AF</a>
-      <ul class="flex space-x-8">
-        <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
-        <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
-        <li><a href="#projects" class="hover:text-blue-400 transition">Projects</a></li>
-        <li><a href="#skills" class="hover:text-blue-400 transition">Skills</a></li>
-        <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+      <a href="#home" class="text-3xl font-black gold-accent">AYMAN</a>
+      <ul class="flex space-x-12">
+        <li><a href="#about" class="text-lg font-medium hover:neon-glow transition-all duration-300 relative group"><span>About</span><span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></span></a></li>
+        <li><a href="#skills" class="text-lg font-medium hover:neon-glow transition-all duration-300 relative group"><span>Skills</span><span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></span></a></li>
+        <li><a href="#projects" class="text-lg font-medium hover:neon-glow transition-all duration-300 relative group"><span>Projects</span><span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></span></a></li>
+        <li><a href="#testimonials" class="text-lg font-medium hover:neon-glow transition-all duration-300 relative group"><span>Testimonials</span><span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></span></a></li>
+        <li><a href="#contact" class="text-lg font-medium hover:neon-glow transition-all duration-300 relative group"><span>Contact</span><span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 group-hover:w-full transition-all duration-300"></span></a></li>
       </ul>
     </div>
   </nav>
-  <!-- Hero -->
-  <section id="home" class="min-h-screen gradient-hero flex items-center justify-center relative overflow-hidden">
+
+  <!-- 3D Hero -->
+  <section id="home" class="min-h-screen relative flex items-center justify-center overflow-hidden">
+    <canvas id="hero-canvas"></canvas>
     <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: 1;"></div>
-    <div class="text-center z-10 relative px-4">
-      <h1 class="text-6xl md:text-8xl font-black mb-6 animate-fadeIn">AYMAN FOSTOK</h1>
-      <p class="text-xl md:text-2xl mb-12 opacity-90 animate-fadeIn delay-200">Cybersecurity Innovator | OSINT Expert | AI Pioneer</p>
-      <a href="#contact" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 px-12 py-6 rounded-full text-lg font-semibold hover:neon hover:scale-105 transition-all duration-300 animate-bounce">Launch Project</a>
+    <div class="hero-content text-center z-20 px-4 max-w-4xl mx-auto">
+      <div class="morph-text mb-8">
+        <h1 class="text-7xl md:text-9xl lg:text-[12rem] font-black leading-none mb-8 gold-accent" data-text="AYMAN FOSTOK">AYMAN FOSTOK</h1>
+        <p class="text-2xl md:text-4xl font-light opacity-90 mb-12 tracking-wide">Elite Cybersecurity | OSINT Virtuoso | AI Architect</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <a href="#contact" class="glassmorphism px-12 py-6 rounded-3xl text-xl font-semibold neon-glow hover:scale-110 transition-all duration-500 inline-flex items-center space-x-3">
+          <i class="fas fa-rocket"></i>
+          <span>Secure Future Now</span>
+        </a>
+        <a href="#projects" class="glassmorphism px-12 py-6 rounded-3xl text-xl font-semibold border border-white/30 hover:neon-glow hover:scale-110 transition-all duration-500 inline-flex items-center space-x-3">
+          <i class="fas fa-eye"></i>
+          <span>View Portfolio</span>
+        </a>
+      </div>
     </div>
   </section>
+
   <!-- About -->
-  <section id="about" class="py-32 bg-gradient-to-b from-gray-900 to-gray-800">
-    <div class="max-w-6xl mx-auto px-8">
-      <h2 class="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">About the Visionary</h2>
-      <div class="grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <p class="text-xl leading-relaxed mb-8">Founder of PistaSecure, revolutionizing cybersecurity with AI-driven threat detection. Master of OSINT, cyber investigations, and business automation. Building tools that safeguard the digital world.</p>
-          <a href="#" class="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300">
-            <i class="fas fa-download"></i>
-            <span>Download Resume</span>
-          </a>
+  <section id="about" class="py-32 parallax-bg">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-6xl lg:text-7xl font-black mb-8 gold-accent">The Cyber Sentinel</h2>
+          <p class="text-xl leading-relaxed mb-12 opacity-90 max-w-2xl">Architect of PistaSecure – AI fortress against digital threats. OSINT maestro uncovering hidden risks. Pioneering autonomous agents for intel supremacy. 8+ years forging unbreakable defenses.</p>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+            <div class="glassmorphism p-6 rounded-2xl text-center hover:scale-105 transition-all">
+              <div class="text-3xl font-black gold-accent mb-2">25+</div>
+              <div class="opacity-80">Projects Secured</div>
+            </div>
+            <div class="glassmorphism p-6 rounded-2xl text-center hover:scale-105 transition-all">
+              <div class="text-3xl font-black gold-accent mb-2">50+</div>
+              <div class="opacity-80">Threats Neutralized</div>
+            </div>
+            <div class="glassmorphism p-6 rounded-2xl text-center hover:scale-105 transition-all">
+              <div class="text-3xl font-black gold-accent mb-2">1M+</div>
+              <div class="opacity-80">IPs Protected</div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="#" class="px-8 py-4 glassmorphism rounded-xl font-semibold hover:neon-glow transition-all">Download Resume</a>
+            <a href="#projects" class="px-8 py-4 border border-white/30 rounded-xl font-semibold hover:bg-white/10 transition-all">Explore Work</a>
+          </div>
         </div>
-        <div class="parallax" style="transform: translateZ(0);">
-          <div class="glass p-12 rounded-3xl neon">
-            <h3 class="text-3xl font-bold mb-6">Stats</h3>
-            <div class="space-y-4">
-              <div class="flex justify-between">
-                <span>Projects</span>
-                <span class="font-bold">25+</span>
-              </div>
-              <div class="flex justify-between">
-                <span>Clients</span>
-                <span class="font-bold">50+</span>
-              </div>
-              <span>Years Experience</span>
-              <span class="font-bold">8+</span>
+        <div class="order-1 lg:order-2 relative">
+          <div class="floating-card glassmorphism p-12 rounded-3xl neon-glow max-w-md mx-auto">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiByeD0iNDAiIGZpbGw9InVybCgjZ3JhZCkiLz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM2NjdlZWEiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNDllOWY4Ii8+CjwvbGluZWFyR3JhZGllbnQ+Cgo8L3N2Zz4K" alt="Ayman Fostok" class="w-full h-64 object-cover rounded-2xl mb-6 shadow-2xl">
+            <h3 class="text-2xl font-bold mb-4">Ayman Fostok</h3>
+            <p class="opacity-80 mb-6">Cybersecurity Alchemist</p>
+            <div class="flex space-x-4">
+              <a href="#" class="w-12 h-12 glassmorphism rounded-full flex items-center justify-center hover:rotate-180 transition-all"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="w-12 h-12 glassmorphism rounded-full flex items-center justify-center hover:rotate-180 transition-all"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="w-12 h-12 glassmorphism rounded-full flex items-center justify-center hover:rotate-180 transition-all"><i class="fab fa-github"></i></a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- Projects -->
-  <section id="projects" class="py-32 bg-gray-900">
-    <div class="max-w-6xl mx-auto px-8">
-      <h2 class="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Featured Projects</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="glass p-10 rounded-3xl hover:scale-105 transition-all duration-500 group">
-          <i class="fas fa-shield-alt text-5xl text-blue-400 mb-6 group-hover:rotate-12 transition"></i>
-          <h3 class="text-3xl font-bold mb-4">PistaSecure</h3>
-          <p class="opacity-80 mb-6">AI-powered threat intelligence platform detecting fraud and phishing in real-time.</p>
-          <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold">View Project →</a>
-        </div>
-        <div class="glass p-10 rounded-3xl hover:scale-105 transition-all duration-500 group">
-          <i class="fas fa-chart-line text-green-400 mb-6 text-5xl group-hover:rotate-12 transition"></i>
-          <h3 class="text-3xl font-bold mb-4">StafficMedia</h3>
-          <p class="opacity-80 mb-6">SMM powerhouse driving viral growth with data-driven campaigns.</p>
-          <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold">View Project →</a>
-        </div>
-        <div class="glass p-10 rounded-3xl hover:scale-105 transition-all duration-500 group">
-          <i class="fas fa-robot text-purple-400 mb-6 text-5xl group-hover:rotate-12 transition"></i>
-          <h3 class="text-3xl font-bold mb-4">OpenClaw AI</h3>
-          <p class="opacity-80 mb-6">Autonomous AI agent for intel gathering and workflow automation.</p>
-          <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold">View Project →</a>
+
+  <!-- Skills Radar -->
+  <section id="skills" class="py-32">
+    <div class="max-w-6xl mx-auto px-8 text-center">
+      <h2 class="text-6xl font-black mb-20 gold-accent">Technical Arsenal</h2>
+      <div class="relative">
+        <canvas id="skillsChart" width="800" height="800" class="mx-auto shadow-2xl rounded-3xl glassmorphism"></canvas>
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div class="text-4xl font-black gold-accent animate-pulse">ELITE</div>
         </div>
       </div>
     </div>
   </section>
-  <!-- Skills -->
-  <section id="skills" class="py-32 bg-gradient-to-b from-gray-800 to-gray-900">
-    <div class="max-w-4xl mx-auto px-8">
-      <h2 class="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Core Skills</h2>
-      <canvas id="skillsRadar" width="600" height="600"></canvas>
-    </div>
-  </section>
-  <!-- Testimonials -->
-  <section class="py-32 bg-gradient-to-t from-gray-900 to-gray-800">
-    <div class="max-w-6xl mx-auto px-8">
-      <h2 class="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-pink-400 to-rose-500 bg-clip-text text-transparent">What They Say</h2>
-      <div class="carousel relative overflow-hidden rounded-3xl glass p-12 mx-auto max-w-4xl">
-        <div class="testimonials flex transition-transform duration-500" style="transform: translateX(0%);">
-          <div class="testimonial text-center min-w-full px-8">
-            <p class=\"text-xl italic mb-6 opacity-90\">\\\"Ayman's OSINT skills are unmatched—turned our intel game around.\\\"</p>
-            <div class="flex items-center justify-center">
-              <img src=\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg==\" class=\"w-16 h-16 rounded-full mx-4\">
-              <div>
-                <h4 class=\"font-bold\">Sarah K.</h4>
-                <p class=\"opacity-70\">CEO, TechSecure</p>
-              </div>
+
+  <!-- Projects Carousel -->
+  <section id="projects" class="py-32 luxury-gradient">
+    <div class="max-w-7xl mx-auto px-8">
+      <h2 class="text-6xl font-black text-center mb-20 gold-accent">Signature Creations</h2>
+      <div class="carousel-container overflow-hidden rounded-3xl glassmorphism mx-auto max-w-6xl h-96 relative">
+        <div class="carousel-track flex transition-transform duration-1000 ease-in-out">
+          <div class="project-card min-w-full flex-shrink-0 glassmorphism mx-6 rounded-2xl p-12 text-center hover:scale-105 transition-all group">
+            <i class="fas fa-shield-alt text-8xl text-blue-400 mb-8 group-hover:rotate-12 group-hover:text-blue-300 transition-all duration-500"></i>
+            <h3 class="text-4xl font-black mb-6 gold-accent">PistaSecure</h3>
+            <p class="text-xl opacity-90 mb-8 max-w-md mx-auto">AI fortress detecting IP threats, fraud, phishing in real-time. Global scam protection platform.</p>
+            <div class="flex gap-4 justify-center">
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">AI/ML</span>
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">Node.js</span>
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">React</span>
             </div>
           </div>
-          <div class="testimonial text-center min-w-full px-8">
-            <p class=\"text-xl italic mb-6 opacity-90\">\\\"PistaSecure saved our company from a major breach. Genius work.\\\"</p>
-            <div class="flex items-center justify-center">
-              <img src=\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg==\" class=\"w-16 h-16 rounded-full mx-4\">
-              <div>
-                <h4 class=\"font-bold\">Mike R.</h4>
-                <p class=\"opacity-70\">CTO, FinTech Inc</p>
-              </div>
+          <div class="project-card min-w-full flex-shrink-0 glassmorphism mx-6 rounded-2xl p-12 text-center hover:scale-105 transition-all group">
+            <i class="fas fa-chart-line text-8xl text-green-400 mb-8 group-hover:rotate-12 group-hover:text-green-300 transition-all duration-500"></i>
+            <h3 class="text-4xl font-black mb-6 gold-accent">StafficMedia</h3>
+            <p class="text-xl opacity-90 mb-8 max-w-md mx-auto">SMM empire scaling brands with viral, data-fueled social strategies.</p>
+            <div class="flex gap-4 justify-center">
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">Analytics</span>
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">Social</span>
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">Growth</span>
             </div>
           </div>
-          <div class="testimonial text-center min-w-full px-8">
-            <p class=\"text-xl italic mb-6 opacity-90\">\\\"Ayman's AI automation is a game-changer for ops. Highly recommend.\\\"</p>
-            <div class="flex items-center justify-center">
-              <img src=\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIgZmlsbD0iI0ZGRkZGRiIvPjwvc3ZnPg==\" class=\"w-16 h-16 rounded-full mx-4\">
-              <div>
-                <h4 class=\"font-bold\">Lisa T.</h4>
-                <p class=\"opacity-70\">Founder, StartupX</p>
-              </div>
+          <div class="project-card min-w-full flex-shrink-0 glassmorphism mx-6 rounded-2xl p-12 text-center hover:scale-105 transition-all group">
+            <i class="fas fa-robot text-8xl text-purple-400 mb-8 group-hover:rotate-12 group-hover:text-purple-300 transition-all duration-500"></i>
+            <h3 class="text-4xl font-black mb-6 gold-accent">OpenClaw AI</h3>
+            <p class="text-xl opacity-90 mb-8 max-w-md mx-auto">Autonomous agent orchestrating intel, automation, OSINT workflows.</p>
+            <div class="flex gap-4 justify-center">
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">AI Agent</span>
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">Automation</span>
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">OSINT</span>
+            </div>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="project-card min-w-full flex-shrink-0 glassmorphism mx-6 rounded-2xl p-12 text-center hover:scale-105 transition-all group">
+            <i class="fas fa-shield-alt text-8xl text-blue-400 mb-8 group-hover:rotate-12 group-hover:text-blue-300 transition-all duration-500"></i>
+            <h3 class="text-4xl font-black mb-6 gold-accent">PistaSecure</h3>
+            <p class="text-xl opacity-90 mb-8 max-w-md mx-auto">AI fortress detecting IP threats, fraud, phishing in real-time. Global scam protection platform.</p>
+            <div class="flex gap-4 justify-center">
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">AI/ML</span>
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">Node.js</span>
+              <span class="px-4 py-2 glassmorphism rounded-full text-sm font-semibold">React</span>
             </div>
           </div>
         </div>
-        <button onclick="nextTestimonial()" class="absolute right-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition">
+        <button onclick="nextProject()" class="absolute right-8 top-1/2 -translate-y-1/2 glassmorphism p-4 rounded-full text-2xl hover:scale-125 transition-all z-10">
           <i class="fas fa-chevron-right"></i>
         </button>
-        <button onclick="prevTestimonial()" class="absolute left-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition">
+        <button onclick="prevProject()" class="absolute left-8 top-1/2 -translate-y-1/2 glassmorphism p-4 rounded-full text-2xl hover:scale-125 transition-all z-10">
           <i class="fas fa-chevron-left"></i>
         </button>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+          <div class="w-3 h-3 bg-white/30 rounded-full cursor-pointer hover:bg-white transition-all" onclick="goToProject(0)"></div>
+          <div class="w-3 h-3 bg-white/30 rounded-full cursor-pointer hover:bg-white transition-all" onclick="goToProject(1)"></div>
+          <div class="w-3 h-3 bg-white/30 rounded-full cursor-pointer hover:bg-white transition-all" onclick="goToProject(2)"></div>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-32 bg-gradient-to-t from-gray-900 via-gray-800 to-transparent">
+    <div class="max-w-6xl mx-auto px-8">
+      <h2 class="text-6xl font-black text-center mb-20 gold-accent">Elite Endorsements</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="glassmorphism p-10 rounded-3xl text-center hover:scale-105 hover:rotate-1 transition-all duration-500 group">
+          <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-all">SK</div>
+          <blockquote class="text-xl italic mb-6 opacity-90">"Ayman's OSINT mastery decoded threats invisible to others. Transformed our defense."</blockquote>
+          <div class="font-bold text-lg gold-accent">Sarah K., CEO TechSecure</div>
+        </div>
+        <div class="glassmorphism p-10 rounded-3xl text-center hover:scale-105 hover:rotate-1 transition-all duration-500 group">
+          <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-all">MR</div>
+          <blockquote class="text-xl italic mb-6 opacity-90">"PistaSecure neutralized breaches in hours. Pure genius engineering."</blockquote>
+          <div class="font-bold text-lg gold-accent">Mike R., CTO FinTech Inc</div>
+        </div>
+        <div class="glassmorphism p-10 rounded-3xl text-center hover:scale-105 hover:rotate-1 transition-all duration-500 group">
+          <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-500 to-violet-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-all">LT</div>
+          <blockquote class="text-xl italic mb-6 opacity-90">"OpenClaw AI automated our entire intel pipeline. Revolutionary."</blockquote>
+          <div class="font-bold text-lg gold-accent">Lisa T., Founder StartupX</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
-  <section id="contact" class="py-32 relative">
-    <div class="max-w-4xl mx-auto px-8 text-center">
-      <h2 class="text-5xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Ready to Collaborate?</h2>
-      <form netlify name="contact" method="POST" class="glass p-12 rounded-3xl max-w-2xl mx-auto">
-        <input type="hidden" name="form-name" value="contact">
-        <input type="text" name="name" placeholder="Your Name" class="w-full p-5 rounded-xl text-lg border-none focus:ring-4 ring-blue-500/30" required>
-        <input type="email" name="email" placeholder="Your Email" class="w-full p-5 rounded-xl text-lg border-none focus:ring-4 ring-blue-500/30" required>
-        <textarea name="message" rows="6" placeholder="Tell me about your project..." class="w-full p-5 rounded-xl text-lg border-none focus:ring-4 ring-blue-500/30 resize-vertical" required></textarea>
-        <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 p-5 rounded-xl text-xl font-bold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-neon mt-4">Launch Partnership <i class="fas fa-rocket ml-3"></i></button>
+  <section id="contact" class="py-32">
+    <div class="max-w-4xl mx-auto px-8">
+      <h2 class="text-6xl font-black text-center mb-16 gold-accent">Strategic Alliance</h2>
+      <form netlify name="ayman-contact" method="POST" class="glassmorphism p-12 rounded-4xl max-w-2xl mx-auto space-y-6">
+        <input type="hidden" name="form-name" value="ayman-contact">
+        <input type="text" name="name" placeholder="Visionary Name" class="w-full p-6 rounded-3xl text-xl border-none focus:ring-4 ring-blue-500/50 bg-white/5 backdrop-blur-sm font-medium" required>
+        <input type="email" name="email" placeholder="Secure Email" class="w-full p-6 rounded-3xl text-xl border-none focus:ring-4 ring-blue-500/50 bg-white/5 backdrop-blur-sm font-medium" required>
+        <textarea name="message" rows="8" placeholder="Describe your mission-critical project..." class="w-full p-6 rounded-3xl text-xl border-none focus:ring-4 ring-blue-500/50 bg-white/5 backdrop-blur-sm font-medium resize-none" required></textarea>
+        <button type="submit" class="w-full bg-gradient-to-r from-gold-accent to-yellow-400 text-gray-900 p-8 rounded-3xl text-2xl font-black uppercase tracking-wide shadow-2xl hover:shadow-neon hover:scale-[1.02] transition-all duration-300 flex items-center justify-center space-x-4">
+          <i class="fas fa-paper-plane"></i>
+          <span>Initiate Contact</span>
+        </button>
       </form>
     </div>
   </section>
+
+  <footer class="py-16 luxury-gradient border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-8 text-center">
+      <div class="flex justify-center space-x-8 mb-12">
+        <a href="#" class="w-16 h-16 glassmorphism rounded-2xl flex items-center justify-center text-2xl hover:rotate-180 hover:neon-glow transition-all duration-500">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" class="w-16 h-16 glassmorphism rounded-2xl flex items-center justify-center text-2xl hover:rotate-180 hover:neon-glow transition-all duration-500">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="w-16 h-16 glassmorphism rounded-2xl flex items-center justify-center text-2xl hover:rotate-180 hover:neon-glow transition-all duration-500">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="text-xl opacity-80 mb-4">&copy; 2026 Ayman Fostok. Elite Cyber Defense.</p>
+      <p class="opacity-60">Powered by OpenClaw AI + GSAP Mastery</p>
+    </div>
+  </footer>
+
   <script>
+    // Matrix Rain
+    const canvas = document.getElementById('matrix-bg');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+    function drawMatrix() {
+      ctx.fillStyle = 'rgba(0,0,0,0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#0f0';
+      ctx.font = fontSize + 'px monospace';
+      drops.forEach((y, i) => {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i * fontSize, y * fontSize);
+        if (y * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i]++;
+      });
+    }
+    setInterval(drawMatrix, 50);
+
     // Particles
     particlesJS('particles-js', {
-      particles: { number: { value: 80 }, color: { value: '#ffffff' }, shape: { type: 'circle' }, opacity: { value: 0.5 }, size: { value: 3 }, line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4 }, move: { speed: 2 } },
-      interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } } },
+      particles: {
+        number: { value: 100, density: { enable: true, value_area: 800 } },
+        color: { value: ['#667eea', '#4ecdc4', '#ffd700'] },
+        shape: { type: 'circle' },
+        opacity: { value: 0.6, random: true },
+        size: { value: 4, random: true },
+        line_linked: { enable: true, distance: 150, color: '#667eea', opacity: 0.3, width: 1 },
+        move: { enable: true, speed: 3, direction: 'none', random: true, straight: false, out_mode: 'out' }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+        modes: { grab: { distance: 200, line_linked: { opacity: 0.7 } }, push: { particles_nb: 4 } }
+      },
       retina_detect: true
     });
-    // Navbar active
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section');
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 200) current = section.getAttribute('id');
-      });
-      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-      document.querySelector(`nav a[href="#${current}"]`).classList.add('active');
-    });
-    // Testimonials carousel
-    let currentTestimonial = 0;
-    const testimonials = document.querySelector('.testimonials');
-    const totalTestimonials = 3;
-    function nextTestimonial() {
-      currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
-      testimonials.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+
+    // 3D Hero Globe
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth * 0.8, window.innerHeight * 0.8);
+    document.getElementById('hero-canvas').appendChild(renderer.domElement);
+    const geometry = new THREE.SphereGeometry(2, 32, 32);
+    const material = new THREE.MeshPhongMaterial({ color: 0x667eea, wireframe: true, transparent: true, opacity: 0.8 });
+    const globe = new THREE.Mesh(geometry, material);
+    scene.add(globe);
+    const light = new THREE.PointLight(0xffffff, 1, 100);
+    light.position.set(10, 10, 10);
+    scene.add(light);
+    camera.position.z = 5;
+    function animateGlobe() {
+      requestAnimationFrame(animateGlobe);
+      globe.rotation.y += 0.005;
+      globe.rotation.x += 0.003;
+      renderer.render(scene, camera);
     }
-    function prevTestimonial() {
-      currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
-      testimonials.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+    animateGlobe();
+
+    // GSAP Magic
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.hero-content h1', { duration: 2, scale: 0.5, opacity: 0, ease: 'back.out(1.7)' });
+    gsap.from('.hero-content p', { duration: 1.5, y: 50, opacity: 0, delay: 0.5, ease: 'power3.out' });
+    gsap.from('.glassmorphism', { duration: 1, y: 100, opacity: 0, stagger: 0.2, scrollTrigger: { trigger: '.glassmorphism', start: 'top 85%' } });
+    gsap.to('.project-card', { scale: 1.05, duration: 0.5, stagger: 0.1, scrollTrigger: { trigger: '#projects', start: 'top 80%' } });
+    ScrollTrigger.refresh();
+
+    // Projects Carousel
+    let currentProject = 0;
+    const projects = document.querySelector('.carousel-track');
+    const totalProjects = 3;
+    function nextProject() {
+      currentProject = (currentProject + 1) % totalProjects;
+      projects.style.transform = `translateX(-${currentProject * 33.33}%)`;
     }
-    setInterval(nextTestimonial, 5000);
-    // Skills Radar Chart
-    const ctx = document.getElementById('skillsRadar').getContext('2d');
-    new Chart(ctx, {
-      type: 'radar',
-      data: {
-        labels: ['OSINT', 'Cybersecurity', 'AI/ML', 'Investigations', 'DevOps', 'Business Ops'],
-        datasets: [{ label: 'Expertise', data: [95, 90, 85, 92, 88, 87], backgroundColor: 'rgba(102,126,234,0.2)', borderColor: '#667eea', borderWidth: 3 }]
-      },
-      options: { scales: { r: { beginAtZero: true, max: 100, ticks: { color: 'white' }, grid: { color: 'rgba(255,255,255,0.1)' }, pointLabels: { color: 'white' } } }, plugins: { legend: { labels: { color: 'white' } } } }
-    });
-    // GSAP Scroll Animations
-    gsap.from('.hero-content h1', { duration: 1.5, y: 100, opacity: 0, ease: 'power3.out' });
-    gsap.from('.card', { duration: 1, y: 50, opacity: 0, stagger: 0.2, scrollTrigger: { trigger: '.projects', start: 'top 80%' } });
-    // Parallax
-    window.addEventListener('scroll', () => {
-      document.querySelectorAll('.parallax').forEach(el => {
-        const speed = 0.5;
-        el.style.transform = `translateY(${scrollY * speed}px)`;
+    function prevProject() {
+      currentProject = (currentProject - 1 + totalProjects) % totalProjects;
+      projects.style.transform = `translateX(-${currentProject * 33.33}%)`;
+    }
+    function goToProject(index) {
+      currentProject = index;
+      projects.style.transform = `translateX(-${currentProject * 33.33}%)`;
+    }
+    setInterval(nextProject, 6000);
+
+    // Skills Chart Animated
+    const ctx = document.getElementById('skillsChart')?.getContext('2d');
+    if (ctx) {
+      const chart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ['OSINT', 'Cybersec', 'AI/ML', 'Investigations', 'DevOps', 'Business'],
+          datasets: [{
+            label: 'Mastery Level',
+            data: [98, 95, 92, 97, 90, 94],
+            backgroundColor: 'rgba(102,126,234,0.2)',
+            borderColor: 'rgba(102,126,234,1)',
+            borderWidth: 4,
+            pointBackgroundColor: 'rgba(102,126,234,1)',
+            pointBorderColor: '#fff',
+            pointBorderWidth: 3,
+            pointHoverRadius: 8
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            r: {
+              beginAtZero: true,
+              max: 100,
+              ticks: { color: 'rgba(255,255,255,0.8)', backdropColor: 'transparent' },
+              grid: { color: 'rgba(255,255,255,0.1)' },
+              pointLabels: { color: 'rgba(255,255,255,0.9)', font: { size: 16, family: 'Inter' } }
+            }
+          },
+          plugins: { legend: { labels: { color: 'rgba(255,255,255,0.9)', font: { size: 18 } } } },
+          animation: { animateRotate: true, duration: 2000 }
+        }
       });
+    }
+
+    // Navbar scroll glow
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('nav');
+      if (window.scrollY > 100) navbar.style.boxShadow = '0 10px 40px rgba(102,126,234,0.3)';
+      else navbar.style.boxShadow = 'none';
+    });
+
+    // Form success
+    document.querySelector('form')?.addEventListener('submit', () => {
+      gsap.to('button[type=submit]', { scale: 0.95, duration: 0.2, yoyo: true, repeat: 1 });
+    });
+
+    // Resize handlers
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      if (renderer) renderer.setSize(window.innerWidth * 0.8, window.innerHeight * 0.8);
     });
   </script>
 </body>
