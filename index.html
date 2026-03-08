@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"UTF-8\">
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+  <title>Ayman Fostok - Portfolio</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
+    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 100px 20px; }
+    h1 { font-size: 3em; margin: 0; }
+    .btn { background: #ff6b6b; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2em; text-decoration: none; display: inline-block; margin-top: 20px; }
+    section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    .projects { background: #f8f9fa; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
+    form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
+    input, textarea { padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 1em; }
+    button[type=submit] { background: #667eea; color: white; border: none; padding: 15px; border-radius: 5px; font-size: 1.1em; cursor: pointer; }
+    @media (max-width: 768px) { h1 { font-size: 2em; } header { padding: 60px 20px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ayman Fostok</h1>
+    <p>Cybersecurity Entrepreneur | OSINT Expert</p>
+    <a href=\"#contact\" class=\"btn\">Contact Me</a>
+  </header>
+  <section class=\"about\">
+    <h2>About</h2>
+    <p>Founder of PistaSecure, specializing in cybersecurity, OSINT, investigations, and business operations. Building tools to fight fraud and scams.</p>
+  </section>
+  <section class=\"projects\">
+    <h2>Projects</h2>
+    <div class=\"grid\">
+      <div class=\"card\">
+        <h3>PistaSecure</h3>
+        <p>AI-powered IP threat scanner and fraud detection platform.</p>
+      </div>
+      <div class=\"card\">
+        <h3>StafficMedia</h3>
+        <p>SMM agency delivering growth through social media services.</p>
+      </div>
+      <div class=\"card\">
+        <h3>OpenClaw AI</h3>
+        <p>Personal AI assistant for automation and intel.</p>
+      </div>
+    </div>
+  </section>
+  <section id=\"contact\" class=\"contact\">
+    <h2>Contact</h2>
+    <form id=\"form\">
+      <input type=\"text\" placeholder=\"Your Name\" required>
+      <input type=\"email\" placeholder=\"Your Email\" required>
+      <textarea rows=\"5\" placeholder=\"Your Message\" required></textarea>
+      <button type=\"submit\">Send Message</button>
+    </form>
+  </section>
+  <script>
+    document.querySelector('.btn').addEventListener('click', () => document.querySelector('#contact').scrollIntoView({behavior: 'smooth'}));
+    document.getElementById('form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thanks! Message sent (demo).');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
