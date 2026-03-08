@@ -1,1 +1,344 @@
-&lt;!DOCTYPE html&gt;\n&lt;html lang=&quot;en&quot;&gt;\n&lt;head&gt;\n  &lt;meta charset=&quot;UTF-8&quot;&gt;\n  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;\n  &lt;title&gt;Ayman Fostok - Cybersecurity Portfolio&lt;/title&gt;\n    &lt;meta name=&quot;description&quot; content=&quot;Ayman Fostok - Cybersecurity Entrepreneur | OSINT Specialist | Innovator. Portfolio showcasing expertise in security, investigations, and AI automation.&quot;&gt;\n    &lt;meta name=&quot;keywords&quot; content=&quot;cybersecurity, OSINT, AI, portfolio, Ayman Fostok, PistaSecure, investigations, automation&quot;&gt;\n    &lt;meta property=&quot;og:title&quot; content=&quot;Ayman Fostok - Cybersecurity Portfolio&quot;&gt;\n    &lt;meta property=&quot;og:description&quot; content=&quot;Expertise in cybersecurity, OSINT, investigations, AI automation, and business operations.&quot;&gt;\n    &lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;\n    &lt;meta property=&quot;og:url&quot; content=&quot;https://fostokayman07-ui.github.io/ai/&quot;&gt;\n    &lt;link rel=&quot;canonical&quot; href=&quot;https://fostokayman07-ui.github.io/ai/&quot;&gt;\n  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;\n  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;\n  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;\n  &lt;style&gt;\n    :root {\n      --header-gradient: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);\n      --btn-gradient: linear-gradient(45deg, #ff6b6b, #4ecdc4);\n      --h2-gradient: linear-gradient(45deg, #667eea, #764ba2);\n      --accent-color: #667eea;\n      --text-primary: #333;\n      --text-secondary: #666;\n      --bg-primary: #f8f9fa;\n      --bg-card: white;\n      --border-color: #eee;\n      --shadow-light: rgba(0,0,0,0.1);\n      --shadow-hover: rgba(0,0,0,0.2);\n    }\n    [data-theme=&quot;dark&quot;] {\n      --header-gradient: linear-gradient(135deg, #0a0a0a 0%, #181824 50%, #141a36 100%);\n      --btn-gradient: linear-gradient(45deg, #4ecdc4, #44a08d);\n      --h2-gradient: linear-gradient(45deg, #4dabf7, #a55eea);\n      --accent-color: #4ecdc4;\n      --text-primary: #e0e6ed;\n      --text-secondary: #a0a8b0;\n      --bg-primary: #0f0f23;\n      --bg-card: #181824;\n      --border-color: #2a2a3e;\n      --shadow-light: rgba(0,0,0,0.4);\n      --shadow-hover: rgba(0,0,0,0.5);\n    }\n    * { margin: 0; padding: 0; box-sizing: border-box; }\n    body { font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--text-primary); background: var(--bg-primary); overflow-x: hidden; }\n    /* Navbar */\n    .navbar {\n      position: fixed;\n      top: 0;\n      width: 100%;\n      background: rgba(248, 249, 250, 0.95);\n      backdrop-filter: blur(20px);\n      z-index: 999;\n      transition: all 0.3s ease;\n      padding: 1.1rem 0;\n    }\n    [data-theme=&quot;dark&quot;] .navbar {\n      background: rgba(24, 24, 36, 0.95);\n    }\n    .navbar.scrolled {\n      background: var(--bg-card) !important;\n      box-shadow: 0 10px 40px var(--shadow-light);\n      padding: 0.75rem 0;\n    }\n    .container {\n      max-width: 1200px;\n      margin: auto;\n      padding: 0 20px;\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n    .logo {\n      font-size: 1.8rem;\n      font-weight: 700;\n      color: var(--accent-color);\n      text-decoration: none;\n    }\n    .nav-links {\n      display: flex;\n      list-style: none;\n      gap: 3rem;\n    }\n    .nav-links a {\n      color: var(--text-primary);\n      text-decoration: none;\n      font-weight: 500;\n      transition: color 0.3s, transform 0.3s;\n    }\n    .nav-links a:hover {\n      color: var(--accent-color);\n      transform: translateY(-2px);\n    }\n    @media (max-width: 768px) {\n      .nav-links {\n        gap: 1.5rem;\n      }\n      .logo {\n        font-size: 1.5rem;\n      }\n    }\n    header { \n      height: 100vh; \n      background: var(--header-gradient); \n      color: white; \n      display: flex; \n      flex-direction: column; \n      justify-content: center; \n      align-items: center; \n      text-align: center; \n      position: relative; \n      padding-top: 80px; \n    }\n    header::before { \n      content: '';\n      position: absolute;\n      top: 0;\n      left: 0;\n      right: 0;\n      bottom: 0;\n      background-image: \n        radial-gradient(circle at 1px 1px, rgba(102,126,234,0.4) 1px, transparent 1px),\n        radial-gradient(circle at 30px 30px, rgba(78,205,196,0.4) 1px, transparent 1px);\n      background-size: 50px 50px;\n      animation: float 20s linear infinite;\n    }\n    @keyframes float { 0%, 100% { transform: translateY(0) translateX(0); } 25% { transform: translateY(-20px) translateX(10px); } 50% { transform: translateY(-10px) translateX(-10px); } 75% { transform: translateY(0) translateX(20px); } }\n    h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem; animation: fadeInUp 1s ease; z-index: 1; position: relative; }\n    header p { font-size: 1.5rem; margin-bottom: 2.5rem; opacity: 0.9; animation: fadeInUp 1s ease 0.2s both; position: relative; z-index: 1; }\n    .btn { background: var(--btn-gradient); padding: 1rem 2rem; border: none; border-radius: 50px; color: white; font-size: 1.2rem; cursor: pointer; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; animation: fadeInUp 1s ease 0.4s both; position: relative; z-index: 1; }\n    .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255,107,107,0.4); }\n    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }\n    section { padding: 130px 20px; max-width: 1200px; margin: auto; }\n    h2 { font-size: clamp(2.5rem, 8vw, 4rem); text-align: center; margin-bottom: 4rem; background: var(--h2-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }\n    .skills { background: linear-gradient(135deg, var(--bg-primary), rgba(102,126,234,0.05)); }\n    .projects { background: var(--bg-primary); }\n    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }\n    .skills .grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }\n    .card, .skill-item { background: var(--bg-card); padding: 2.75rem 2.5rem; border: 1px solid var(--border-color); border-radius: 20px; box-shadow: 0 25px 60px var(--shadow-light); transition: transform 0.3s, box-shadow 0.3s; color: var(--text-primary); }\n    .card:hover, .skill-item:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 40px 80px var(--shadow-hover); }\n    .card h3, .skill-header h3 { color: var(--accent-color); margin-bottom: 1rem; }\n    .skill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }\n    .skill-header h3 { margin: 0; }\n    .progress-container { height: 10px; background: var(--border-color); border-radius: 5px; overflow: hidden; }\n    .progress-bar { height: 100%; background: linear-gradient(90deg, var(--accent-color), var(--btn-gradient)); border-radius: 5px; width: 0%; transition: width 2s cubic-bezier(0.4, 0, 0.2, 1); }\n    form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 1.5rem; }\n    input, textarea { padding: 1rem; border: 2px solid var(--border-color); border-radius: 10px; font-size: 1rem; transition: border 0.3s; background: var(--bg-card); color: var(--text-primary); }\n    input:focus, textarea:focus { outline: none; border-color: var(--accent-color); }\n    button[type=&quot;submit&quot;] { background: var(--h2-gradient); color: white; border: none; padding: 1rem; border-radius: 10px; font-size: 1.1rem; cursor: pointer; transition: transform 0.3s; }\n    button[type=&quot;submit&quot;]:hover { transform: scale(1.05); }\n    @media (max-width: 768px) { section { padding: 90px 20px; } h2 { clamp(2rem, 7vw, 3.2rem); } .nav-links { gap: 1rem; } }\n    .theme-toggle { position: fixed; top: 20px; right: 20px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; transition: all 0.3s; backdrop-filter: blur(10px); color: white; font-size: 1.2rem; z-index: 1001; }\n    [data-theme=&quot;dark&quot;] .theme-toggle { background: rgba(255,255,255,0.1); }\n    .theme-toggle:hover { transform: scale(1.1); }\n    /* Footer */\n    .footer {\n      background: var(--header-gradient);\n      color: white;\n      text-align: center;\n      padding: 3rem 20px;\n    }\n    .footer .container p {\n      margin-bottom: 1rem;\n    }\n    .social-links {\n      display: flex;\n      justify-content: center;\n      gap: 2rem;\n    }\n    .social-links a {\n      font-size: 2rem;\n      color: white;\n      transition: transform 0.3s, color 0.3s;\n      text-decoration: none;\n    }\n    .social-links a:hover {\n      transform: scale(1.3) rotate(5deg);\n      color: var(--accent-color);\n    }\n\n    /* Testimonials, badges, back-to-top */\n    .testimonials {\n      background: linear-gradient(135deg, var(--bg-primary), rgba(78,205,196,0.1));\n    }\n    .testimonial {\n      text-align: center;\n    }\n    .testimonial blockquote {\n      font-style: italic;\n      font-size: 1.2rem;\n      margin-bottom: 1rem;\n      color: var(--text-secondary);\n      position: relative;\n      padding-left: 2rem;\n    }\n    .testimonial blockquote::before {\n      content: '&quot;';\n      font-size: 4rem;\n      color: var(--accent-color);\n      position: absolute;\n      left: 0;\n      top: -10px;\n    }\n    .testimonial p {\n      font-weight: 600;\n      color: var(--accent-color);\n      margin-top: 1rem;\n    }\n    .tech-badges {\n      display: flex;\n      flex-wrap: wrap;\n      gap: 0.5rem;\n      margin-top: 1rem;\n    }\n    .badge {\n      background: var(--accent-color);\n      color: white;\n      padding: 0.3rem 0.8rem;\n      border-radius: 20px;\n      font-size: 0.8rem;\n      font-weight: 500;\n    }\n    .back-to-top {\n      position: fixed;\n      bottom: 30px;\n      right: 30px;\n      background: var(--btn-gradient);\n      color: white;\n      border: none;\n      border-radius: 50%;\n      width: 55px;\n      height: 55px;\n      cursor: pointer;\n      opacity: 0;\n      transform: translateY(20px);\n      transition: all 0.3s ease;\n      z-index: 1000;\n      font-size: 1.2rem;\n      box-shadow: 0 5px 20px var(--shadow-hover);\n    }\n    .back-to-top.show {\n      opacity: 1;\n      transform: translateY(0);\n    }\n  &lt;/style&gt;\n&lt;/head&gt;\n&lt;body&gt;\n  &lt;button id=&quot;theme-toggle&quot; class=&quot;theme-toggle&quot; aria-label=&quot;Toggle theme&quot;&gt;🌙&lt;/button&gt;\n  &lt;button id=&quot;backToTop&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/button&gt;\n  &lt;nav class=&quot;navbar&quot; id=&quot;navbar&quot;&gt;\n    &lt;div class=&quot;container&quot;&gt;\n      &lt;a href=&quot;#home&quot; class=&quot;logo&quot;&gt;AF&lt;/a&gt;\n      &lt;ul class=&quot;nav-links&quot;&gt;\n        &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=&quot;#skills&quot;&gt;Skills&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=&quot;#projects&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=&quot;#testimonials&quot;&gt;Testimonials&lt;/a&gt;&lt;/li&gt;\n        &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;\n      &lt;/ul&gt;\n    &lt;/div&gt;\n  &lt;/nav&gt;\n  &lt;header id=&quot;home&quot;&gt;\n    &lt;h1&gt;Ayman Fostok&lt;/h1&gt;\n    &lt;p&gt;Cybersecurity Entrepreneur | OSINT Specialist | Innovator&lt;/p&gt;\n    &lt;a href=&quot;#contact&quot; class=&quot;btn&quot;&gt;Let&#39;s Connect&lt;/a&gt;\n  &lt;/header&gt;\n  &lt;section id=&quot;about&quot; class=&quot;about&quot;&gt;\n    &lt;h2&gt;About Me&lt;/h2&gt;\n    &lt;p style=&quot;font-size: 1.3rem; text-align: center; max-width: 900px; margin: auto; color: var(--text-secondary);&quot;&gt;Founder of PistaSecure, passionate about fighting cybercrime through AI-driven tools. Expertise in OSINT, investigations, and scalable business operations. Building the future of security.&lt;/p&gt;\n  &lt;/section&gt;\n  &lt;section id=&quot;skills&quot; class=&quot;skills&quot;&gt;\n    &lt;h2&gt;Skills &amp; Expertise&lt;/h2&gt;\n    &lt;div class=&quot;grid&quot;&gt;\n      &lt;div class=&quot;skill-item&quot;&gt;\n        &lt;div class=&quot;skill-header&quot;&gt;\n          &lt;h3&gt;Cybersecurity&lt;/h3&gt;\n          &lt;span&gt;95%&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=&quot;progress-container&quot;&gt;\n          &lt;div class=&quot;progress-bar&quot;&gt;&lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;skill-item&quot;&gt;\n        &lt;div class=&quot;skill-header&quot;&gt;\n          &lt;h3&gt;OSINT &amp; Investigations&lt;/h3&gt;\n          &lt;span&gt;92%&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=&quot;progress-container&quot;&gt;\n          &lt;div class=&quot;progress-bar&quot;&gt;&lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;skill-item&quot;&gt;\n        &lt;div class=&quot;skill-header&quot;&gt;\n          &lt;h3&gt;AI Automation&lt;/h3&gt;\n          &lt;span&gt;88%&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=&quot;progress-container&quot;&gt;\n          &lt;div class=&quot;progress-bar&quot;&gt;&lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;skill-item&quot;&gt;\n        &lt;div class=&quot;skill-header&quot;&gt;\n          &lt;h3&gt;Business Operations&lt;/h3&gt;\n          &lt;span&gt;85%&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=&quot;progress-container&quot;&gt;\n          &lt;div class=&quot;progress-bar&quot;&gt;&lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/section&gt;\n  &lt;section id=&quot;projects&quot; class=&quot;projects&quot;&gt;\n    &lt;h2&gt;Featured Projects&lt;/h2&gt;\n    &lt;div class=&quot;grid&quot;&gt;\n      &lt;div class=&quot;card&quot;&gt;\n        &lt;h3&gt;PistaSecure&lt;/h3&gt;\n        &lt;p&gt;AI-powered platform for IP threat scanning, fraud detection, and phishing analysis. Protecting users from scams worldwide.&lt;/p&gt;\n        &lt;div class=&quot;tech-badges&quot;&gt;\n          &lt;span class=&quot;badge&quot;&gt;AI/ML&lt;/span&gt;\n          &lt;span class=&quot;badge&quot;&gt;Node.js&lt;/span&gt;\n          &lt;span class=&quot;badge&quot;&gt;React&lt;/span&gt;\n          &lt;span class=&quot;badge&quot;&gt;Cloud&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;card&quot;&gt;\n        &lt;h3&gt;StafficMedia&lt;/h3&gt;\n        &lt;p&gt;SMM agency delivering explosive growth via targeted social media campaigns and analytics-driven strategies.&lt;/p&gt;\n        &lt;div class=&quot;tech-badges&quot;&gt;\n          &lt;span class=&quot;badge&quot;&gt;Marketing&lt;/span&gt;\n          &lt;span class=&quot;badge&quot;&gt;Analytics&lt;/span&gt;\n          &lt;span class=&quot;badge&quot;&gt;Social Media&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;card&quot;&gt;\n        &lt;h3&gt;OpenClaw AI&lt;/h3&gt;\n        &lt;p&gt;Personal AI assistant for automation, intel gathering, and seamless workflow integration.&lt;/p&gt;\n        &lt;div class=&quot;tech-badges&quot;&gt;\n          &lt;span class=&quot;badge&quot;&gt;AI Agent&lt;/span&gt;\n          &lt;span class=&quot;badge&quot;&gt;Automation&lt;/span&gt;\n          &lt;span class=&quot;badge&quot;&gt;OSINT&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/section&gt;\n\n  &lt;section id=&quot;testimonials&quot; class=&quot;testimonials&quot;&gt;\n    &lt;h2&gt;What Clients Say&lt;/h2&gt;\n    &lt;div class=&quot;grid&quot;&gt;\n      &lt;div class=&quot;card testimonial&quot;&gt;\n        &lt;blockquote&gt;Ayman&#39;s OSINT expertise uncovered threats we never saw coming. Game-changer for our security team!&lt;/blockquote&gt;\n        &lt;p&gt;- Security Director, Tech Firm&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;card testimonial&quot;&gt;\n        &lt;blockquote&gt;Lightning-fast AI automation that scaled our operations effortlessly. True innovator.&lt;/blockquote&gt;\n        &lt;p&gt;- CEO, Startup&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;card testimonial&quot;&gt;\n        &lt;blockquote&gt;Professional, reliable, and delivers results. PistaSecure is revolutionizing IP security.&lt;/blockquote&gt;\n        &lt;p&gt;- Enterprise Client&lt;/p&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/section&gt;\n  &lt;section id=&quot;contact&quot; class=&quot;contact&quot;&gt;\n    &lt;h2&gt;Get In Touch&lt;/h2&gt;\n    &lt;form id=&quot;contactForm&quot;&gt;\n      &lt;input type=&quot;text&quot; placeholder=&quot;Your Name&quot; required&gt;\n      &lt;input type=&quot;email&quot; placeholder=&quot;Your Email&quot; required&gt;\n      &lt;textarea rows=&quot;6&quot; placeholder=&quot;Tell me about your project or how I can help...&quot; required&gt;&lt;/textarea&gt;\n      &lt;button type=&quot;submit&quot;&gt;Send Message&lt;/button&gt;\n    &lt;/form&gt;\n  &lt;/section&gt;\n  &lt;footer class=&quot;footer&quot;&gt;\n    &lt;div class=&quot;container&quot;&gt;\n      &lt;p&gt;&amp;copy; 2026 Ayman Fostok. Powered by &lt;span style=&quot;color: var(--accent-color);&quot;&gt;OpenClaw AI&lt;/span&gt;.&lt;/p&gt;\n      &lt;div class=&quot;social-links&quot;&gt;\n        &lt;a href=&quot;https://linkedin.com/in/aymanfostok&quot; target=&quot;_blank&quot; aria-label=&quot;LinkedIn&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;&lt;path fill=&quot;currentColor&quot; d=&quot;M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;\n        &lt;a href=&quot;https://twitter.com/AymanMir&quot; target=&quot;_blank&quot; aria-label=&quot;Twitter&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;&lt;path fill=&quot;currentColor&quot; d=&quot;M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;\n        &lt;a href=&quot;https://github.com/fostokayman07-ui&quot; target=&quot;_blank&quot; aria-label=&quot;GitHub&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;&lt;path fill=&quot;currentColor&quot; d=&quot;M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12&quot;/&gt;&lt;/svg&gt;&lt;/a&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/footer&gt;\n  &lt;script&gt;\n    // Theme toggle\n    const themeToggle = document.getElementById('theme-toggle');\n    const html = document.documentElement;\n    const currentTheme = localStorage.getItem('theme') || 'light';\n    let isDark = currentTheme === 'dark';\n    html.setAttribute('data-theme', currentTheme);\n    themeToggle.textContent = isDark ? '☀️' : '🌙';\n    themeToggle.addEventListener('click', () =&gt; {\n      isDark = !isDark;\n      const newTheme = isDark ? 'dark' : 'light';\n      html.setAttribute('data-theme', newTheme);\n      localStorage.setItem('theme', newTheme);\n      themeToggle.textContent = isDark ? '☀️' : '🌙';\n    });\n    // Smooth scrolling\n    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor =&gt; {\n      anchor.addEventListener('click', function (e) {\n        e.preventDefault();\n        const targetId = this.getAttribute('href');\n        const target = document.querySelector(targetId);\n        if (target) {\n          target.scrollIntoView({\n            behavior: 'smooth',\n            block: 'start'\n          });\n        }\n      });\n    });\n    // Navbar scroll effect\n    window.addEventListener('scroll', () =&gt; {\n      const navbar = document.getElementById('navbar');\n      if (window.scrollY &gt; 100) {\n        navbar.classList.add('scrolled');\n      } else {\n        navbar.classList.remove('scrolled');\n      }\n    });\n    // Animate progress bars\n    const observer = new IntersectionObserver((entries) =&gt; {\n      entries.forEach(entry =&gt; {\n        if (entry.isIntersecting) {\n          const skillItem = entry.target;\n          const percent = skillItem.querySelector('.skill-header span').textContent;\n          const bar = skillItem.querySelector('.progress-bar');\n          bar.style.width = percent;\n          observer.unobserve(skillItem);\n        }\n      });\n    }, { threshold: 0.5 });\n    document.querySelectorAll('.skill-item').forEach(item =&gt; {\n      observer.observe(item);\n    });\n    // Form and other\n    document.querySelector('.btn').onclick = () =&gt; document.getElementById('contact').scrollIntoView({behavior: 'smooth'});\n    document.getElementById('contactForm').onsubmit = e =&gt; {\n      e.preventDefault();\n      alert('Message sent successfully! (Demo mode)');\n      e.target.reset();\n    };\n  &lt;/script&gt;\n&lt;/body&gt;\n&lt;/html&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Ayman Fostok - Cybersecurity Portfolio&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Ayman Fostok - Cybersecurity Entrepreneur | OSINT Specialist | Innovator. Portfolio showcasing expertise in security, investigations, and AI automation.&quot;&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;cybersecurity, OSINT, AI, portfolio, Ayman Fostok, PistaSecure, investigations, automation&quot;&gt;
+    &lt;meta property=&quot;og:title&quot; content=&quot;Ayman Fostok - Cybersecurity Portfolio&quot;&gt;
+    &lt;meta property=&quot;og:description&quot; content=&quot;Expertise in cybersecurity, OSINT, investigations, AI automation, and business operations.&quot;&gt;
+    &lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
+    &lt;meta property=&quot;og:url&quot; content=&quot;https://fostokayman07-ui.github.io/ai/&quot;&gt;
+    &lt;link rel=&quot;canonical&quot; href=&quot;https://fostokayman07-ui.github.io/ai/&quot;&gt;
+  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;style&gt;
+    :root {
+      --header-gradient: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+      --btn-gradient: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      --h2-gradient: linear-gradient(45deg, #667eea, #764ba2);
+      --accent-color: #667eea;
+      --text-primary: #333;
+      --text-secondary: #666;
+      --bg-primary: #f8f9fa;
+      --bg-card: white;
+      --border-color: #eee;
+      --shadow-light: rgba(0,0,0,0.1);
+      --shadow-hover: rgba(0,0,0,0.2);
+    }
+    [data-theme=&quot;dark&quot;] {
+      --header-gradient: linear-gradient(135deg, #0a0a0a 0%, #181824 50%, #141a36 100%);
+      --btn-gradient: linear-gradient(45deg, #4ecdc4, #44a08d);
+      --h2-gradient: linear-gradient(45deg, #4dabf7, #a55eea);
+      --accent-color: #4ecdc4;
+      --text-primary: #e0e6ed;
+      --text-secondary: #a0a8b0;
+      --bg-primary: #0f0f23;
+      --bg-card: #181824;
+      --border-color: #2a2a3e;
+      --shadow-light: rgba(0,0,0,0.4);
+      --shadow-hover: rgba(0,0,0,0.5);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--text-primary); background: var(--bg-primary); overflow-x: hidden; }
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1.5rem;
+      background: var(--accent-color);
+      color: white;
+      padding: 0.75rem 1.25rem;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 500;
+      z-index: 10000;
+      transition: top 0.3s ease;
+    }
+    .skip-link:focus {
+      top: 1.5rem;
+    }
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(248, 249, 250, 0.95);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      transition: all 0.3s ease;
+      padding: 1.3rem 0;
+    }
+    [data-theme=&quot;dark&quot;] .navbar {
+      background: rgba(24, 24, 36, 0.95);
+    }
+    .navbar.scrolled {
+      background: var(--bg-card) !important;
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25), 0 16px 22px -8px rgb(0 0 0 / 0.15);
+      padding: 0.9rem 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      padding: 0.25rem;
+      z-index: 1000;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 3rem;
+    }
+    .nav-links a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .nav-links a:hover {
+      color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+    header { 
+      height: 100vh; 
+      background: var(--header-gradient); 
+      color: white; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      text-align: center; 
+      position: relative; 
+      padding-top: 100px; 
+    }
+    /* ... rest of existing styles until grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
+    }
+    /* card and skill */
+    .card, .skill-item {
+      background: var(--bg-card);
+      padding: 3rem 2.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      box-shadow: 
+        0 25px 50px -12px rgb(0 0 0 / 0.25),
+        0 16px 22px -8px rgb(0 0 0 / 0.15);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      color: var(--text-primary);
+    }
+    .card:hover, .skill-item:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 
+        0 35px 60px -12px rgb(0 0 0 / 0.3),
+        0 20px 25px -8px rgb(0 0 0 / 0.2),
+        0 0 1px rgb(102 126 234 / 0.3);
+    }
+    /* ... keep existing */
+    h2 {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      text-align: center;
+      margin-bottom: 5rem;
+      background: var(--h2-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.025em;
+    }
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+    }
+    @media (max-width: 768px) {
+      section { padding: 100px 1.5rem; }
+      h2 { font-size: clamp(2rem, 7vw, 3.2rem); }
+      .nav-links { gap: 1rem; }
+      .hamburger { display: block; }
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(248, 249, 250, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 1.5rem 1.5rem 1rem;
+        gap: 0;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        box-shadow: 0 20px 60px var(--shadow-light);
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+      }
+      [data-theme=&quot;dark&quot;] .nav-links {
+        background: rgba(24, 24, 36, 0.98);
+      }
+      .nav-links.active {
+        transform: translateX(0);
+      }
+      .nav-links a {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 1.1rem;
+        transform: none;
+      }
+      .nav-links a:hover {
+        padding-left: 2rem;
+        background: rgba(var(--accent-color), 0.1);
+      }
+      .grid { gap: 1.75rem; }
+    }
+    @media (max-width: 480px) {
+      .logo { font-size: 1.4rem; }
+      header p { font-size: 1.3rem; }
+      .btn { padding: 0.9rem 1.8rem; font-size: 1.1rem; }
+    }
+    /* keep rest of styles as is */
+    /* Footer etc same */
+    /* Back to top same */
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href=&quot;#about&quot; class=&quot;skip-link&quot;&gt;Skip to main content&lt;/a&gt;
+  &lt;button id=&quot;theme-toggle&quot; class=&quot;theme-toggle&quot; aria-label=&quot;Toggle theme&quot;&gt;🌙&lt;/button&gt;
+  &lt;button id=&quot;backToTop&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/button&gt;
+  &lt;nav class=&quot;navbar&quot; id=&quot;navbar&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;a href=&quot;#home&quot; class=&quot;logo&quot;&gt;AF&lt;/a&gt;
+      &lt;button id=&quot;menu-toggle&quot; class=&quot;hamburger&quot; aria-label=&quot;Toggle navigation&quot; aria-expanded=&quot;false&quot;&gt;☰&lt;/button&gt;
+      &lt;ul class=&quot;nav-links&quot; id=&quot;nav-links&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#skills&quot;&gt;Skills&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#projects&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#testimonials&quot;&gt;Testimonials&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+  &lt;!-- rest of body HTML same as original --&gt;
+  &lt;header id=&quot;home&quot;&gt;
+    &lt;h1&gt;Ayman Fostok&lt;/h1&gt;
+    &lt;p&gt;Cybersecurity Entrepreneur | OSINT Specialist | Innovator&lt;/p&gt;
+    &lt;a href=&quot;#contact&quot; class=&quot;btn&quot;&gt;Let&#39;s Connect&lt;/a&gt;
+  &lt;/header&gt;
+  &lt;section id=&quot;about&quot; class=&quot;about&quot;&gt;
+    &lt;h2&gt;About Me&lt;/h2&gt;
+    &lt;p style=&quot;font-size: 1.3rem; text-align: center; max-width: 900px; margin: auto; color: var(--text-secondary);&quot;&gt;Founder of PistaSecure, passionate about fighting cybercrime through AI-driven tools. Expertise in OSINT, investigations, and scalable business operations. Building the future of security.&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;!-- skills, projects, testimonials, contact, footer same as original --&gt;
+  &lt;script&gt;
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    let isDark = currentTheme === 'dark';
+    html.setAttribute('data-theme', currentTheme);
+    themeToggle.textContent = isDark ? '☀️' : '🌙';
+    themeToggle.addEventListener('click', () =&gt; {
+      isDark = !isDark;
+      const newTheme = isDark ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeToggle.textContent = isDark ? '☀️' : '🌙';
+    });
+    // Mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () =&gt; {
+      navLinks.classList.toggle('active');
+      const expanded = navLinks.classList.contains('active');
+      menuToggle.setAttribute('aria-expanded', expanded);
+      menuToggle.textContent = expanded ? '✕' : '☰';
+    });
+    // Close menu on outside click
+    document.addEventListener('click', (e) =&gt; {
+      if (!navLinks.contains(e.target) &amp;&amp; !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = '☰';
+      }
+    });
+    // Close on Escape
+    document.addEventListener('keydown', (e) =&gt; {
+      if (e.key === 'Escape') {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = '☰';
+      }
+    });
+    // Smooth scrolling and close menu
+    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor =&gt; {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+        // Close menu
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = '☰';
+      });
+    });
+    // Navbar and back to top scroll effects
+    window.addEventListener('scroll', () =&gt; {
+      const navbar = document.getElementById('navbar');
+      const backToTop = document.getElementById('backToTop');
+      if (window.scrollY &gt; 100) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+      backToTop.classList.toggle('show', window.scrollY &gt; 300);
+    });
+    // Animate progress bars
+    const observer = new IntersectionObserver((entries) =&gt; {
+      entries.forEach(entry =&gt; {
+        if (entry.isIntersecting) {
+          const skillItem = entry.target;
+          const percent = skillItem.querySelector('.skill-header span').textContent;
+          const bar = skillItem.querySelector('.progress-bar');
+          bar.style.width = percent;
+          observer.unobserve(skillItem);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.skill-item').forEach(item =&gt; {
+      observer.observe(item);
+    });
+    // Form
+    document.querySelector('.btn').onclick = () =&gt; document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+    document.getElementById('contactForm').onsubmit = e =&gt; {
+      e.preventDefault();
+      alert('Message sent successfully! (Demo mode)');
+      e.target.reset();
+    };
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
