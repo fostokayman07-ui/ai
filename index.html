@@ -1,344 +1,156 @@
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-  &lt;title&gt;Ayman Fostok - Cybersecurity Portfolio&lt;/title&gt;
-    &lt;meta name=&quot;description&quot; content=&quot;Ayman Fostok - Cybersecurity Entrepreneur | OSINT Specialist | Innovator. Portfolio showcasing expertise in security, investigations, and AI automation.&quot;&gt;
-    &lt;meta name=&quot;keywords&quot; content=&quot;cybersecurity, OSINT, AI, portfolio, Ayman Fostok, PistaSecure, investigations, automation&quot;&gt;
-    &lt;meta property=&quot;og:title&quot; content=&quot;Ayman Fostok - Cybersecurity Portfolio&quot;&gt;
-    &lt;meta property=&quot;og:description&quot; content=&quot;Expertise in cybersecurity, OSINT, investigations, AI automation, and business operations.&quot;&gt;
-    &lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
-    &lt;meta property=&quot;og:url&quot; content=&quot;https://fostokayman07-ui.github.io/ai/&quot;&gt;
-    &lt;link rel=&quot;canonical&quot; href=&quot;https://fostokayman07-ui.github.io/ai/&quot;&gt;
-  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
-  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
-  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
-  &lt;style&gt;
-    :root {
-      --header-gradient: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
-      --btn-gradient: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-      --h2-gradient: linear-gradient(45deg, #667eea, #764ba2);
-      --accent-color: #667eea;
-      --text-primary: #333;
-      --text-secondary: #666;
-      --bg-primary: #f8f9fa;
-      --bg-card: white;
-      --border-color: #eee;
-      --shadow-light: rgba(0,0,0,0.1);
-      --shadow-hover: rgba(0,0,0,0.2);
-    }
-    [data-theme=&quot;dark&quot;] {
-      --header-gradient: linear-gradient(135deg, #0a0a0a 0%, #181824 50%, #141a36 100%);
-      --btn-gradient: linear-gradient(45deg, #4ecdc4, #44a08d);
-      --h2-gradient: linear-gradient(45deg, #4dabf7, #a55eea);
-      --accent-color: #4ecdc4;
-      --text-primary: #e0e6ed;
-      --text-secondary: #a0a8b0;
-      --bg-primary: #0f0f23;
-      --bg-card: #181824;
-      --border-color: #2a2a3e;
-      --shadow-light: rgba(0,0,0,0.4);
-      --shadow-hover: rgba(0,0,0,0.5);
-    }
+<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"UTF-8\">
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+  <title>Ayman Fostok | Cybersecurity Portfolio</title>
+  <link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap\" rel=\"stylesheet\">
+  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\">
+  <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--text-primary); background: var(--bg-primary); overflow-x: hidden; }
-    /* Skip link */
-    .skip-link {
-      position: absolute;
-      top: -100px;
-      left: 1.5rem;
-      background: var(--accent-color);
-      color: white;
-      padding: 0.75rem 1.25rem;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 500;
-      z-index: 10000;
-      transition: top 0.3s ease;
-    }
-    .skip-link:focus {
-      top: 1.5rem;
-    }
-    /* Navbar */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(248, 249, 250, 0.95);
-      backdrop-filter: blur(20px);
-      z-index: 999;
-      transition: all 0.3s ease;
-      padding: 1.3rem 0;
-    }
-    [data-theme=&quot;dark&quot;] .navbar {
-      background: rgba(24, 24, 36, 0.95);
-    }
-    .navbar.scrolled {
-      background: var(--bg-card) !important;
-      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25), 0 16px 22px -8px rgb(0 0 0 / 0.15);
-      padding: 0.9rem 0;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-    }
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--accent-color);
-      text-decoration: none;
-    }
-    .hamburger {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.8rem;
-      color: var(--text-primary);
-      cursor: pointer;
-      padding: 0.25rem;
-      z-index: 1000;
-    }
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 3rem;
-    }
-    .nav-links a {
-      color: var(--text-primary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s, transform 0.3s;
-    }
-    .nav-links a:hover {
-      color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    header { 
-      height: 100vh; 
-      background: var(--header-gradient); 
-      color: white; 
-      display: flex; 
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; 
-      text-align: center; 
-      position: relative; 
-      padding-top: 100px; 
-    }
-    /* ... rest of existing styles until grid */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 2.5rem;
-    }
-    /* card and skill */
-    .card, .skill-item {
-      background: var(--bg-card);
-      padding: 3rem 2.5rem;
-      border: 1px solid var(--border-color);
-      border-radius: 24px;
-      box-shadow: 
-        0 25px 50px -12px rgb(0 0 0 / 0.25),
-        0 16px 22px -8px rgb(0 0 0 / 0.15);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      color: var(--text-primary);
-    }
-    .card:hover, .skill-item:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 
-        0 35px 60px -12px rgb(0 0 0 / 0.3),
-        0 20px 25px -8px rgb(0 0 0 / 0.2),
-        0 0 1px rgb(102 126 234 / 0.3);
-    }
-    /* ... keep existing */
-    h2 {
-      font-size: clamp(2.5rem, 8vw, 4rem);
-      text-align: center;
-      margin-bottom: 5rem;
-      background: var(--h2-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -0.025em;
-    }
-    .btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
-    }
-    @media (max-width: 768px) {
-      section { padding: 100px 1.5rem; }
-      h2 { font-size: clamp(2rem, 7vw, 3.2rem); }
-      .nav-links { gap: 1rem; }
-      .hamburger { display: block; }
-      .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(248, 249, 250, 0.98);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        padding: 1.5rem 1.5rem 1rem;
-        gap: 0;
-        transform: translateX(-100%);
-        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        box-shadow: 0 20px 60px var(--shadow-light);
-        max-height: calc(100vh - 100px);
-        overflow-y: auto;
-      }
-      [data-theme=&quot;dark&quot;] .nav-links {
-        background: rgba(24, 24, 36, 0.98);
-      }
-      .nav-links.active {
-        transform: translateX(0);
-      }
-      .nav-links a {
-        padding: 1rem 1.5rem;
-        border-bottom: 1px solid var(--border-color);
-        font-size: 1.1rem;
-        transform: none;
-      }
-      .nav-links a:hover {
-        padding-left: 2rem;
-        background: rgba(var(--accent-color), 0.1);
-      }
-      .grid { gap: 1.75rem; }
-    }
-    @media (max-width: 480px) {
-      .logo { font-size: 1.4rem; }
-      header p { font-size: 1.3rem; }
-      .btn { padding: 0.9rem 1.8rem; font-size: 1.1rem; }
-    }
-    /* keep rest of styles as is */
-    /* Footer etc same */
-    /* Back to top same */
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;a href=&quot;#about&quot; class=&quot;skip-link&quot;&gt;Skip to main content&lt;/a&gt;
-  &lt;button id=&quot;theme-toggle&quot; class=&quot;theme-toggle&quot; aria-label=&quot;Toggle theme&quot;&gt;🌙&lt;/button&gt;
-  &lt;button id=&quot;backToTop&quot; class=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;↑&lt;/button&gt;
-  &lt;nav class=&quot;navbar&quot; id=&quot;navbar&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;a href=&quot;#home&quot; class=&quot;logo&quot;&gt;AF&lt;/a&gt;
-      &lt;button id=&quot;menu-toggle&quot; class=&quot;hamburger&quot; aria-label=&quot;Toggle navigation&quot; aria-expanded=&quot;false&quot;&gt;☰&lt;/button&gt;
-      &lt;ul class=&quot;nav-links&quot; id=&quot;nav-links&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#skills&quot;&gt;Skills&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#projects&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#testimonials&quot;&gt;Testimonials&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-  &lt;/nav&gt;
-  &lt;!-- rest of body HTML same as original --&gt;
-  &lt;header id=&quot;home&quot;&gt;
-    &lt;h1&gt;Ayman Fostok&lt;/h1&gt;
-    &lt;p&gt;Cybersecurity Entrepreneur | OSINT Specialist | Innovator&lt;/p&gt;
-    &lt;a href=&quot;#contact&quot; class=&quot;btn&quot;&gt;Let&#39;s Connect&lt;/a&gt;
-  &lt;/header&gt;
-  &lt;section id=&quot;about&quot; class=&quot;about&quot;&gt;
-    &lt;h2&gt;About Me&lt;/h2&gt;
-    &lt;p style=&quot;font-size: 1.3rem; text-align: center; max-width: 900px; margin: auto; color: var(--text-secondary);&quot;&gt;Founder of PistaSecure, passionate about fighting cybercrime through AI-driven tools. Expertise in OSINT, investigations, and scalable business operations. Building the future of security.&lt;/p&gt;
-  &lt;/section&gt;
-  &lt;!-- skills, projects, testimonials, contact, footer same as original --&gt;
-  &lt;script&gt;
+    :root { --primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%); --secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); --dark: #0a0a0a; --light: #f8f9fa; --text: #333; --shadow: 0 20px 60px rgba(0,0,0,0.3); }
+    [data-theme=\"dark\"] { --text: #e0e0e0; --light: #1a1a1a; }
+    body { font-family: 'Poppins', sans-serif; line-height: 1.7; color: var(--text); transition: all 0.3s; }
+    nav { position: fixed; top: 0; width: 100%; background: rgba(10,10,10,0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 1rem 0; transition: all 0.3s; }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
+    nav a { color: white; text-decoration: none; font-weight: 400; position: relative; }
+    nav a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--secondary); transition: width 0.3s; }
+    nav a:hover::after { width: 100%; }
+    .theme-toggle { position: absolute; right: 2rem; top: 1rem; background: none; border: 1px solid white; color: white; padding: 0.5rem; border-radius: 50%; cursor: pointer; }
+    header { min-height: 100vh; background: var(--primary); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden; }
+    #particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+    .hero-content { z-index: 2; position: relative; animation: fadeInUp 1.5s ease; }
+    h1 { font-size: clamp(3rem, 8vw, 6rem); margin-bottom: 1rem; background: linear-gradient(45deg, white, #f0f0f0); -webkit-background-clip: text; background-clip: text; }
+    .subtitle { font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9; animation: fadeInUp 1.5s ease 0.3s both; }
+    .btn { background: var(--secondary); color: white; padding: 1.2rem 3rem; border: none; border-radius: 50px; font-size: 1.2rem; cursor: pointer; text-decoration: none; transition: all 0.4s; box-shadow: var(--shadow); animation: fadeInUp 1.5s ease 0.6s both; position: relative; overflow: hidden; }
+    .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.5s; }
+    .btn:hover::before { left: 100%; }
+    .btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
+    section { padding: 100px 20px; max-width: 1400px; margin: auto; }
+    h2 { font-size: clamp(2.5rem, 5vw, 4rem); text-align: center; margin-bottom: 4rem; position: relative; }
+    h2::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: var(--primary); border-radius: 2px; }
+    .about { background: var(--light); }
+    .about p { font-size: 1.3rem; text-align: center; max-width: 800px; margin: auto; opacity: 0.9; }
+    .projects { background: var(--dark); color: white; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+    .card { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); transition: all 0.4s; cursor: pointer; }
+    .card:hover { transform: translateY(-15px); background: rgba(255,255,255,0.1); box-shadow: var(--shadow); }
+    .card i { font-size: 3rem; color: #667eea; margin-bottom: 1rem; }
+    .contact { background: var(--light); }
+    form { max-width: 700px; margin: auto; display: grid; gap: 1.5rem; }
+    input, textarea { padding: 1.2rem; border: 2px solid rgba(102,126,234,0.2); border-radius: 15px; font-size: 1rem; background: white; transition: all 0.3s; }
+    input:focus, textarea:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.1); outline: none; }
+    .submit-btn { background: var(--primary); color: white; border: none; padding: 1.2rem; border-radius: 15px; font-size: 1.2rem; cursor: pointer; transition: all 0.3s; grid-column: 1/-1; }
+    .submit-btn:hover { transform: scale(1.02); box-shadow: var(--shadow); }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 768px) { nav ul { gap: 1rem; font-size: 0.9rem; } .theme-toggle { right: 1rem; } section { padding: 60px 20px; } }
+  </style>
+</head>
+<body data-theme=\"light\">
+  <nav>
+    <ul>
+      <li><a href=\"#home\">Home</a></li>
+      <li><a href=\"#about\">About</a></li>
+      <li><a href=\"#projects\">Projects</a></li>
+      <li><a href=\"#contact\">Contact</a></li>
+    </ul>
+    <button class=\"theme-toggle\" onclick=\"toggleTheme()\" title=\"Toggle Theme\"><i class=\"fas fa-moon\"></i></button>
+  </nav>
+  <header id=\"home\">
+    <canvas id=\"particles\"></canvas>
+    <div class=\"hero-content\">
+      <h1>Ayman Fostok</h1>
+      <p class=\"subtitle\">Cybersecurity Visionary | OSINT Master | Future Builder</p>
+      <a href=\"#contact\" class=\"btn\">Start Project</a>
+    </div>
+  </header>
+  <section id=\"about\" class=\"about\">
+    <h2>About Me</h2>
+    <p>Founder of PistaSecure, pioneering AI-driven cybersecurity solutions. Expert in OSINT, threat hunting, and scalable ops. Transforming challenges into opportunities with cutting-edge tech.</p>
+  </section>
+  <section id=\"projects\" class=\"projects\">
+    <h2>Signature Projects</h2>
+    <div class=\"grid\">
+      <div class=\"card\">
+        <i class=\"fas fa-shield-alt\"></i>
+        <h3>PistaSecure</h3>
+        <p>Next-gen IP scanner & fraud detector. Protecting the digital world one threat at a time.</p>
+      </div>
+      <div class=\"card\">
+        <i class=\"fas fa-chart-line\"></i>
+        <h3>StafficMedia</h3>
+        <p>Social growth engine. Data-driven SMM for explosive visibility.</p>
+      </div>
+      <div class=\"card\">
+        <i class=\"fas fa-robot\"></i>
+        <h3>OpenClaw AI</h3>
+        <p>Your autonomous AI partner for intel, automation, and beyond.</p>
+      </div>
+    </div>
+  </section>
+  <section id=\"contact\" class=\"contact\">
+    <h2>Let's Build Something Amazing</h2>
+    <form id=\"contactForm\">
+      <input type=\"text\" placeholder=\"Your Name\" required>
+      <input type=\"email\" placeholder=\"Your Email\" required>
+      <textarea rows=\"6\" placeholder=\"Describe your vision...\" required></textarea>
+      <button type=\"submit\" class=\"submit-btn\">Launch Collaboration</button>
+    </form>
+  </section>
+  <script>
     // Theme toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    let isDark = currentTheme === 'dark';
-    html.setAttribute('data-theme', currentTheme);
-    themeToggle.textContent = isDark ? '☀️' : '🌙';
-    themeToggle.addEventListener('click', () =&gt; {
-      isDark = !isDark;
-      const newTheme = isDark ? 'dark' : 'light';
-      html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      themeToggle.textContent = isDark ? '☀️' : '🌙';
-    });
-    // Mobile menu
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-    menuToggle.addEventListener('click', () =&gt; {
-      navLinks.classList.toggle('active');
-      const expanded = navLinks.classList.contains('active');
-      menuToggle.setAttribute('aria-expanded', expanded);
-      menuToggle.textContent = expanded ? '✕' : '☰';
-    });
-    // Close menu on outside click
-    document.addEventListener('click', (e) =&gt; {
-      if (!navLinks.contains(e.target) &amp;&amp; !menuToggle.contains(e.target)) {
-        navLinks.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.textContent = '☰';
-      }
-    });
-    // Close on Escape
-    document.addEventListener('keydown', (e) =&gt; {
-      if (e.key === 'Escape') {
-        navLinks.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.textContent = '☰';
-      }
-    });
-    // Smooth scrolling and close menu
-    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor =&gt; {
-      anchor.addEventListener('click', function (e) {
+    function toggleTheme() {
+      const body = document.body;
+      body.dataset.theme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.querySelector('.theme-toggle i').className = body.dataset.theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+    // Smooth scroll
+    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const target = document.querySelector(targetId);
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-        // Close menu
-        navLinks.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.textContent = '☰';
+        document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
       });
-    });
-    // Navbar and back to top scroll effects
-    window.addEventListener('scroll', () =&gt; {
-      const navbar = document.getElementById('navbar');
-      const backToTop = document.getElementById('backToTop');
-      if (window.scrollY &gt; 100) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-      backToTop.classList.toggle('show', window.scrollY &gt; 300);
-    });
-    // Animate progress bars
-    const observer = new IntersectionObserver((entries) =&gt; {
-      entries.forEach(entry =&gt; {
-        if (entry.isIntersecting) {
-          const skillItem = entry.target;
-          const percent = skillItem.querySelector('.skill-header span').textContent;
-          const bar = skillItem.querySelector('.progress-bar');
-          bar.style.width = percent;
-          observer.unobserve(skillItem);
-        }
-      });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('.skill-item').forEach(item =&gt; {
-      observer.observe(item);
     });
     // Form
-    document.querySelector('.btn').onclick = () =&gt; document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
-    document.getElementById('contactForm').onsubmit = e =&gt; {
+    document.getElementById('contactForm').addEventListener('submit', e => {
       e.preventDefault();
-      alert('Message sent successfully! (Demo mode)');
+      alert('Project launched! 🚀 (Connect for real integration)');
       e.target.reset();
-    };
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+    });
+    // Particles (simple canvas)
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const particles = [];
+    for (let i = 0; i < 100; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        radius: Math.random() * 2 + 1
+      });
+    }
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255,255,255,0.5)';
+        ctx.fill();
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>
