@@ -1,78 +1,303 @@
-<!DOCTYPE html>
-<html lang=\"en\">
-<head>
-  <meta charset=\"UTF-8\">
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-  <title>Ayman Fostok - Cybersecurity Portfolio</title>
-  <style>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; data-theme=&quot;dark&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Ayman Fostok - Cybersecurity Portfolio&lt;/title&gt;
+  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+  &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css&quot; integrity=&quot;sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot; /&gt;
+  &lt;style&gt;
+    :root {
+      --bg-primary: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+      --bg-secondary: #ffffff;
+      --text-primary: #333333;
+      --text-secondary: #6c757d;
+      --accent-gradient: linear-gradient(45deg, #667eea, #764ba2);
+      --btn-gradient: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      --card-bg: #ffffff;
+      --shadow-light: rgba(0,0,0,0.1);
+      --border-color: #dee2e6;
+    }
+    [data-theme=&quot;dark&quot;] {
+      --bg-primary: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+      --bg-secondary: #1a1a2e;
+      --text-primary: #ffffff;
+      --text-secondary: #cccccc;
+      --accent-gradient: linear-gradient(45deg, #4ecdc4, #667eea);
+      --btn-gradient: linear-gradient(45deg, #ff6b6b, #667eea);
+      --card-bg: #2a2a3e;
+      --shadow-light: rgba(0,0,0,0.4);
+      --border-color: #444;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; }
-    header { height: 100vh; background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; }
-    header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iODAiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+PGltZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjgwIiBzcmM9ImRhdGE6aW1hZ2Uv c3ZnK2Jhc2U2NCx...') no-repeat center/cover; opacity: 0.1; animation: float 6s ease-in-out infinite; }
+    body { 
+      font-family: &#39;Inter&#39;, sans-serif; 
+      line-height: 1.6; 
+      color: var(--text-primary); 
+      overflow-x: hidden; 
+      transition: all 0.3s ease;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--bg-secondary);
+      box-shadow: 0 2px 10px var(--shadow-light);
+      z-index: 1000;
+      transition: background 0.3s;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: var(--text-primary);
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--accent-gradient); }
+    header { 
+      height: 100vh; 
+      background: var(--bg-primary); 
+      color: var(--text-primary); 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      text-align: center; 
+      position: relative; 
+      padding-top: 80px;
+    }
+    header::before { 
+      content: &#39;&#39;; 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      bottom: 0; 
+      background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      opacity: 0.5; 
+      animation: float 6s ease-in-out infinite; 
+    }
     @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
     h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem; animation: fadeInUp 1s ease; }
-    p { font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9; animation: fadeInUp 1s ease 0.2s both; }
-    .btn { background: linear-gradient(45deg, #ff6b6b, #4ecdc4); padding: 1rem 2rem; border: none; border-radius: 50px; color: white; font-size: 1.2rem; cursor: pointer; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; animation: fadeInUp 1s ease 0.4s both; }
+    .header-subtitle { font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9; animation: fadeInUp 1s ease 0.2s both; }
+    .header-actions { display: flex; gap: 1rem; align-items: center; }
+    .btn { 
+      background: var(--btn-gradient); 
+      padding: 1rem 2rem; 
+      border: none; 
+      border-radius: 50px; 
+      color: white; 
+      font-size: 1.2rem; 
+      cursor: pointer; 
+      text-decoration: none; 
+      transition: transform 0.3s, box-shadow 0.3s; 
+      animation: fadeInUp 1s ease 0.4s both; 
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
     .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255,107,107,0.4); }
+    #themeToggle {
+      background: none;
+      border: 2px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 0.8rem;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    #themeToggle:hover { background: var(--border-color); }
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     section { padding: 80px 20px; max-width: 1200px; margin: auto; }
-    h2 { font-size: 3rem; text-align: center; margin-bottom: 3rem; background: linear-gradient(45deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .projects { background: #f8f9fa; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-    .card { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
-    .card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.2); }
-    .card h3 { color: #667eea; margin-bottom: 1rem; }
-    form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 1.5rem; }
-    input, textarea { padding: 1rem; border: 2px solid #eee; border-radius: 10px; font-size: 1rem; transition: border 0.3s; }
-    input:focus, textarea:focus { outline: none; border-color: #667eea; }
-    button[type=\"submit\"] { background: linear-gradient(45deg, #667eea, #764ba2); color: white; border: none; padding: 1rem; border-radius: 10px; font-size: 1.1rem; cursor: pointer; transition: transform 0.3s; }
-    button[type=\"submit\"]:hover { transform: scale(1.05); }
-    @media (max-width: 768px) { section { padding: 40px 20px; } h2 { font-size: 2rem; } }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Ayman Fostok</h1>
-    <p>Cybersecurity Entrepreneur | OSINT Specialist | Innovator</p>
-    <a href=\"#contact\" class=\"btn\">Let's Connect</a>
-  </header>
-  <section class=\"about\">
-    <h2>About Me</h2>
-    <p style=\"font-size: 1.2rem; text-align: center; max-width: 800px; margin: auto;\">Founder of PistaSecure, passionate about fighting cybercrime through AI-driven tools. Expertise in OSINT, investigations, and scalable business operations. Building the future of security.</p>
-  </section>
-  <section class=\"projects\">
-    <h2>Featured Projects</h2>
-    <div class=\"grid\">
-      <div class=\"card\">
-        <h3>PistaSecure</h3>
-        <p>AI-powered platform for IP threat scanning, fraud detection, and phishing analysis. Protecting users from scams worldwide.</p>
-      </div>
-      <div class=\"card\">
-        <h3>StafficMedia</h3>
-        <p>SMM agency delivering explosive growth via targeted social media campaigns and analytics-driven strategies.</p>
-      </div>
-      <div class=\"card\">
-        <h3>OpenClaw AI</h3>
-        <p>Personal AI assistant for automation, intel gathering, and seamless workflow integration.</p>
-      </div>
-    </div>
-  </section>
-  <section id=\"contact\" class=\"contact\">
-    <h2>Get In Touch</h2>
-    <form id=\"contactForm\">
-      <input type=\"text\" placeholder=\"Your Name\" required>
-      <input type=\"email\" placeholder=\"Your Email\" required>
-      <textarea rows=\"6\" placeholder=\"Tell me about your project or how I can help...\" required></textarea>
-      <button type=\"submit\">Send Message</button>
-    </form>
-  </section>
-  <script>
-    document.querySelector('.btn').onclick = () => document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
-    document.getElementById('contactForm').onsubmit = e => {
+    h2 { 
+      font-size: 3rem; 
+      text-align: center; 
+      margin-bottom: 3rem; 
+      background: var(--accent-gradient); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      background-clip: text; 
+    }
+    .projects { background: var(--bg-secondary); }
+    .grid, .skills-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 2rem; 
+    }
+    .card, .skill { 
+      background: var(--card-bg); 
+      padding: 2.5rem; 
+      border-radius: 20px; 
+      box-shadow: 0 20px 40px var(--shadow-light); 
+      transition: all 0.3s; 
+      text-align: center;
+      border: 1px solid var(--border-color);
+    }
+    .card:hover, .skill:hover { 
+      transform: translateY(-15px); 
+      box-shadow: 0 30px 60px var(--shadow-light); 
+    }
+    .card h3, .skill h4 { 
+      color: var(--accent-gradient); 
+      margin-bottom: 1rem; 
+      font-size: 1.5rem;
+    }
+    .skill i { font-size: 3rem; color: var(--accent-gradient); margin-bottom: 1rem; }
+    form { 
+      max-width: 600px; 
+      margin: auto; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 1.5rem; 
+    }
+    input, textarea { 
+      padding: 1rem; 
+      border: 2px solid var(--border-color); 
+      border-radius: 10px; 
+      font-size: 1rem; 
+      transition: border 0.3s; 
+      background: var(--card-bg);
+      color: var(--text-primary);
+    }
+    input:focus, textarea:focus { 
+      outline: none; 
+      border-color: var(--accent-gradient); 
+    }
+    button[type=&quot;submit&quot;] { 
+      background: var(--accent-gradient); 
+      color: white; 
+      border: none; 
+      padding: 1rem; 
+      border-radius: 10px; 
+      font-size: 1.1rem; 
+      cursor: pointer; 
+      transition: transform 0.3s; 
+    }
+    button[type=&quot;submit&quot;]:hover { transform: scale(1.05); }
+    @media (max-width: 768px) { 
+      section { padding: 60px 20px; } 
+      h2 { font-size: 2.5rem; } 
+      nav ul { flex-direction: column; padding: 1rem; }
+      nav a { margin: 0.5rem 0; }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;&lt;i class=&quot;fas fa-home&quot;&gt;&lt;/i&gt; Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;&lt;i class=&quot;fas fa-user&quot;&gt;&lt;/i&gt; About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#skills&quot;&gt;&lt;i class=&quot;fas fa-cogs&quot;&gt;&lt;/i&gt; Skills&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#projects&quot;&gt;&lt;i class=&quot;fas fa-project-diagram&quot;&gt;&lt;/i&gt; Projects&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt; Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;header id=&quot;home&quot;&gt;
+    &lt;h1&gt;Ayman Fostok&lt;/h1&gt;
+    &lt;p class=&quot;header-subtitle&quot;&gt;Cybersecurity Entrepreneur | OSINT Specialist | Innovator&lt;/p&gt;
+    &lt;div class=&quot;header-actions&quot;&gt;
+      &lt;a href=&quot;#contact&quot; class=&quot;btn&quot;&gt;&lt;i class=&quot;fas fa-rocket&quot;&gt;&lt;/i&gt; Let&#39;s Connect&lt;/a&gt;
+      &lt;button id=&quot;themeToggle&quot; title=&quot;Toggle theme&quot;&gt;&lt;i class=&quot;fas fa-moon&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;section id=&quot;about&quot; class=&quot;about&quot;&gt;
+    &lt;h2&gt;About Me&lt;/h2&gt;
+    &lt;p style=&quot;font-size: 1.2rem; text-align: center; max-width: 800px; margin: auto;&quot;&gt;Founder of PistaSecure, passionate about fighting cybercrime through AI-driven tools. Expertise in OSINT, investigations, and scalable business operations. Building the future of security.&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section id=&quot;skills&quot; class=&quot;skills&quot;&gt;
+    &lt;h2&gt;Core Skills&lt;/h2&gt;
+    &lt;div class=&quot;skills-grid&quot;&gt;
+      &lt;div class=&quot;skill&quot;&gt;
+        &lt;i class=&quot;fas fa-shield-alt&quot;&gt;&lt;/i&gt;
+        &lt;h4&gt;Cybersecurity&lt;/h4&gt;
+        &lt;p&gt;Threat detection, vulnerability assessment, secure systems design.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;skill&quot;&gt;
+        &lt;i class=&quot;fas fa-search&quot;&gt;&lt;/i&gt;
+        &lt;h4&gt;OSINT&lt;/h4&gt;
+        &lt;p&gt;Advanced intelligence gathering and digital investigations.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;skill&quot;&gt;
+        &lt;i class=&quot;fas fa-robot&quot;&gt;&lt;/i&gt;
+        &lt;h4&gt;AI &amp; Automation&lt;/h4&gt;
+        &lt;p&gt;Building intelligent agents for ops and intel.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;skill&quot;&gt;
+        &lt;i class=&quot;fas fa-chart-line&quot;&gt;&lt;/i&gt;
+        &lt;h4&gt;Business Ops&lt;/h4&gt;
+        &lt;p&gt;Scaling agencies and tech startups efficiently.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;section id=&quot;projects&quot; class=&quot;projects&quot;&gt;
+    &lt;h2&gt;Featured Projects&lt;/h2&gt;
+    &lt;div class=&quot;grid&quot;&gt;
+      &lt;div class=&quot;card&quot;&gt;
+        &lt;i class=&quot;fas fa-globe&quot; style=&quot;font-size: 3rem; color: var(--accent-gradient); margin-bottom: 1rem;&quot;&gt;&lt;/i&gt;
+        &lt;h3&gt;PistaSecure&lt;/h3&gt;
+        &lt;p&gt;AI-powered platform for IP threat scanning, fraud detection, and phishing analysis. Protecting users from scams worldwide.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card&quot;&gt;
+        &lt;i class=&quot;fas fa-bullhorn&quot; style=&quot;font-size: 3rem; color: var(--accent-gradient); margin-bottom: 1rem;&quot;&gt;&lt;/i&gt;
+        &lt;h3&gt;StafficMedia&lt;/h3&gt;
+        &lt;p&gt;SMM agency delivering explosive growth via targeted social media campaigns and analytics-driven strategies.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;card&quot;&gt;
+        &lt;i class=&quot;fas fa-brain&quot; style=&quot;font-size: 3rem; color: var(--accent-gradient); margin-bottom: 1rem;&quot;&gt;&lt;/i&gt;
+        &lt;h3&gt;OpenClaw AI&lt;/h3&gt;
+        &lt;p&gt;Personal AI assistant for automation, intel gathering, and seamless workflow integration.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;section id=&quot;contact&quot; class=&quot;contact&quot;&gt;
+    &lt;h2&gt;Get In Touch&lt;/h2&gt;
+    &lt;form id=&quot;contactForm&quot;&gt;
+      &lt;input type=&quot;text&quot; placeholder=&quot;Your Name&quot; required&gt;
+      &lt;input type=&quot;email&quot; placeholder=&quot;Your Email&quot; required&gt;
+      &lt;textarea rows=&quot;6&quot; placeholder=&quot;Tell me about your project or how I can help...&quot; required&gt;&lt;/textarea&gt;
+      &lt;button type=&quot;submit&quot;&gt;&lt;i class=&quot;fas fa-paper-plane&quot;&gt;&lt;/i&gt; Send Message&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/section&gt;
+  &lt;script&gt;
+    // Smooth scroll for nav links
+    document.querySelectorAll(&#39;a[href^=&quot;#&quot;]&#39;).forEach(anchor =&gt; {
+      anchor.addEventListener(&#39;click&#39;, function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute(&#39;href&#39;));
+        if (target) target.scrollIntoView({ behavior: &#39;smooth&#39; });
+      });
+    });
+
+    // Theme toggle
+    const html = document.documentElement;
+    const themeToggle = document.getElementById(&#39;themeToggle&#39;);
+    const themeIcon = themeToggle.querySelector(&#39;i&#39;);
+    const currentTheme = localStorage.getItem(&#39;theme&#39;) || &#39;dark&#39;;
+    html.setAttribute(&#39;data-theme&#39;, currentTheme);
+    themeIcon.className = currentTheme === &#39;dark&#39; ? &#39;fas fa-sun&#39; : &#39;fas fa-moon&#39;;
+    themeToggle.onclick = () =&gt; {
+      const newTheme = html.getAttribute(&#39;data-theme&#39;) === &#39;dark&#39; ? &#39;light&#39; : &#39;dark&#39;;
+      html.setAttribute(&#39;data-theme&#39;, newTheme);
+      localStorage.setItem(&#39;theme&#39;, newTheme);
+      themeIcon.className = newTheme === &#39;dark&#39; ? &#39;fas fa-sun&#39; : &#39;fas fa-moon&#39;;
+    };
+
+    // Contact form
+    document.getElementById(&#39;contactForm&#39;).onsubmit = e =&gt; {
       e.preventDefault();
-      alert('Message sent successfully! (Demo mode)');
+      alert(&#39;Message sent successfully! (Demo mode - connect via Telegram @AymanMir)&#39;);
       e.target.reset();
     };
-  </script>
-</body>
-</html>
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
