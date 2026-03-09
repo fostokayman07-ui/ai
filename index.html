@@ -1,1 +1,351 @@
-[Full comprehensive HTML: Hero, About w/photo, Skills w/icons, Projects w/mock images/links, Testimonials slider JS, Contact Formspree, Resume DL (base64 PDF stub), Footer w/social/blog, full GSAP/scroll, SEO/A11y]
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexander Voss - Cyber-Luxury AI Engineer & Designer</title>
+  <meta name="description" content="Elite AI Engineer crafting cyber-luxury digital experiences. Full-stack ML, generative AI, Web3, cyberpunk aesthetics. Portfolio of cutting-edge projects.">
+  <meta name="keywords" content="AI engineer, machine learning, cyberpunk portfolio, luxury web design, generative AI, Web3 developer">
+  <meta name="author" content="Alexander Voss">
+  <link rel="canonical" href="https://yourname.netlify.app/">
+  <meta property="og:title" content="Alexander Voss - Cyber-Luxury AI Portfolio">
+  <meta property="og:description" content="Elite AI Engineer crafting cyber-luxury digital experiences">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2500&q=80">
+  <meta property="og:url" content="https://yourname.netlify.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+  <meta name="theme-color" content="#8b5cf6">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { orbitron: ['Orbitron', 'monospace'], exo: ['Exo 2', 'sans-serif'] } } }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    .neon-glow { box-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 40px #8b5cf6; }
+    .neon-text { text-shadow: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 20px #8b5cf6; }
+    .glass { @apply bg-gradient-to-r from-purple-900/30 to-blue-900/30 backdrop-blur-xl border border-white/20 shadow-2xl; }
+    .glitch { animation: glitch 0.3s infinite; }
+    @keyframes glitch { 0%,100%{transform:translate(0);} 20%{transform:translate(-2px,2px);} 40%{transform:translate(-2px,-2px);} 60%{transform:translate(2px,2px);} 80%{transform:translate(2px,-2px);} }
+    .cyber-hover:hover { transform: scale(1.05) rotate(1deg); filter: drop-shadow(0 0 20px #8b5cf6); }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 min-h-screen overflow-x-hidden font-exo text-white">
+  <!-- Three.js Globe Hero Background -->
+  <canvas id="heroGlobe" class="fixed inset-0 z-0 w-full h-full opacity-30"></canvas>
+  <div id="particles-js" class="fixed inset-0 z-10"></div>
+
+  <header class="glass fixed top-0 w-full z-50 py-4 px-6 md:px-12">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto">
+      <a href="#home" class="text-2xl font-orbitron font-black neon-text cyber-hover">AV</a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="#about" class="neon-text hover:neon-glow transition-all">About</a></li>
+        <li><a href="#skills" class="neon-text hover:neon-glow transition-all">Skills</a></li>
+        <li><a href="#projects" class="neon-text hover:neon-glow transition-all">Projects</a></li>
+        <li><a href="#contact" class="neon-text hover:neon-glow transition-all">Contact</a></li>
+      </ul>
+      <button class="md:hidden">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative px-6 md:px-12 pt-20">
+      <div class="text-center max-w-4xl mx-auto glass p-12 md:p-20 rounded-3xl cyber-hover">
+        <h1 class="text-5xl md:text-7xl font-orbitron font-black neon-text mb-6 leading-tight">ALEXANDER VOSS</h1>
+        <p class="text-xl md:text-2xl mb-8 opacity-90">Elite <span class="neon-glow">AI Engineer</span> & Cyber-Luxury Designer</p>
+        <p class="text-lg md:text-xl mb-12 opacity-80 max-w-2xl mx-auto">Crafting generative AI experiences, Web3 innovations, and cyberpunk digital luxury at the intersection of code and art.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#projects" class="glass px-8 py-4 rounded-2xl font-exo font-600 text-lg neon-glow hover:glitch transition-all">View Projects</a>
+          <a href="#contact" class="border border-white/30 px-8 py-4 rounded-2xl font-exo font-600 text-lg hover:neon-glow transition-all">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-32 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="glass p-12 rounded-3xl cyber-hover order-2 md:order-1">
+          <h2 class="text-4xl md:text-5xl font-orbitron font-black neon-text mb-8">THE ARCHITECT</h2>
+          <p class="text-lg opacity-90 mb-6 leading-relaxed">Pioneering AI-driven cyber luxury. I architect neural networks that dream in neon, full-stack systems that pulse with data, and Web3 experiences that redefine ownership in the digital realm.</p>
+          <p class="text-lg opacity-80 mb-8 leading-relaxed">15+ years forging code into cybernetic symphonies. From generative adversaries to quantum-resistant blockchains, I build the invisible infrastructure of tomorrow's luxury.</p>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 glass rounded-2xl flex items-center justify-center neon-glow">🎓</div>
+              <span>MIT AI Research → Cyber Luxury Studio</span>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 glass rounded-2xl flex items-center justify-center neon-glow">🏆</div>
+              <span>200M+ users, 9-figure exits</span>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="glass p-2 rounded-3xl cyber-hover">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Alexander Voss - Cyber AI Engineer" class="w-full rounded-2xl neon-glow" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-32 px-6 md:px-12 bg-black/30">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-5xl font-orbitron font-black neon-text text-center mb-20">NEURAL ARMAMENT</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass p-8 rounded-3xl cyber-hover group">
+            <div class="text-4xl mb-6 group-hover:scale-110 transition-transform">🧠</div>
+            <h3 class="text-2xl font-orbitron font-black neon-text mb-4">Generative AI</h3>
+            <ul class="space-y-2 opacity-80">
+              <li>Stable Diffusion / DALL-E orchestration</li>
+              <li>GANs • VAEs • Diffusion Models</li>
+              <li>LLM fine-tuning (GPT-4 scale)</li>
+              <li>Real-time inference optimization</li>
+            </ul>
+          </div>
+          <div class="glass p-8 rounded-3xl cyber-hover group">
+            <div class="text-4xl mb-6 group-hover:scale-110 transition-transform">⚡</div>
+            <h3 class="text-2xl font-orbitron font-black neon-text mb-4">Full-Stack Cyber</h3>
+            <ul class="space-y-2 opacity-80">
+              <li>Next.js 15 • React 19 • SvelteKit</li>
+              <li>Node.js • Rust • Go microservices</li>
+              <li>Three.js • WebGPU • Shaders</li>
+              <li>TailwindCSS • Framer Motion</li>
+            </ul>
+          </div>
+          <div class="glass p-8 rounded-3xl cyber-hover group">
+            <div class="text-4xl mb-6 group-hover:scale-110 transition-transform">🔗</div>
+            <h3 class="text-2xl font-orbitron font-black neon-text mb-4">Web3 & Blockchain</h3>
+            <ul class="space-y-2 opacity-80">
+              <li>Solidity • Rust (Solana) • Move</li>
+              <li>ZK proofs • MPC wallets</li>
+              <li>IPFS • Arweave pinning</li>
+              <li>Account Abstraction (ERC-4337)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Carousel -->
+    <section id="projects" class="py-32 px-6 md:px-12">
+      <h2 class="text-5xl font-orbitron font-black neon-text text-center mb-20">CYBER FORGE</h2>
+      <div class="max-w-7xl mx-auto">
+        <div class="projects-carousel relative" id="projectsCarousel">
+          <div class="carousel-track flex gap-8 overflow-hidden">
+            <div class="carousel-item glass p-12 rounded-3xl min-w-[90%] md:min-w-[50%] lg:min-w-[33%] cyber-hover">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="NeuraLux AI Studio" class="w-full h-48 object-cover rounded-2xl mb-6 neon-glow" loading="lazy">
+              <h3 class="text-2xl font-orbitron font-black neon-text mb-4">NeuraLux AI Studio</h3>
+              <p class="opacity-80 mb-6">Generative cyber luxury platform. Stable Diffusion XL + custom LoRAs, deployed on edge TPU clusters.</p>
+              <div class="flex gap-4">
+                <a href="#" class="glass px-6 py-2 rounded-xl text-sm neon-glow">Live Demo</a>
+                <a href="#" class="border border-white/30 px-6 py-2 rounded-xl text-sm hover:neon-glow">Code</a>
+              </div>
+            </div>
+            <div class="carousel-item glass p-12 rounded-3xl min-w-[90%] md:min-w-[50%] lg:min-w-[33%] cyber-hover">
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="QuantumVault Wallet" class="w-full h-48 object-cover rounded-2xl mb-6 neon-glow" loading="lazy">
+              <h3 class="text-2xl font-orbitron font-black neon-text mb-4">QuantumVault MPC</h3>
+              <p class="opacity-80 mb-6">Threshold signature MPC wallet. Rust + WebAssembly, zk-SNARK proofs, deployed on Solana.</p>
+              <div class="flex gap-4">
+                <a href="#" class="glass px-6 py-2 rounded-xl text-sm neon-glow">Live Demo</a>
+                <a href="#" class="border border-white/30 px-6 py-2 rounded-xl text-sm hover:neon-glow">Code</a>
+              </div>
+            </div>
+            <div class="carousel-item glass p-12 rounded-3xl min-w-[90%] md:min-w-[50%] lg:min-w-[33%] cyber-hover">
+              <img src="https://images.unsplash.com/photo-1551288049-b1f4ab4ff9de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CyberDeck Terminal" class="w-full h-48 object-cover rounded-2xl mb-6 neon-glow" loading="lazy">
+              <h3 class="text-2xl font-orbitron font-black neon-text mb-4">CyberDeck Terminal</h3>
+              <p class="opacity-80 mb-6">WebGPU raymarched cyberdeck. Custom shader GLSL, Three.js fiber, real-time terminal emulation.</p>
+              <div class="flex gap-4">
+                <a href="#" class="glass px-6 py-2 rounded-xl text-sm neon-glow">Live Demo</a>
+                <a href="#" class="border border-white/30 px-6 py-2 rounded-xl text-sm hover:neon-glow">Code</a>
+              </div>
+            </div>
+            <div class="carousel-item glass p-12 rounded-3xl min-w-[90%] md:min-w-[50%] lg:min-w-[33%] cyber-hover">
+              <img src="https://images.unsplash.com/photo-1460932654568-51194eefe872?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="NeuralSynth Music" class="w-full h-48 object-cover rounded-2xl mb-6 neon-glow" loading="lazy">
+              <h3 class="text-2xl font-orbitron font-black neon-text mb-4">NeuralSynth Engine</h3>
+              <p class="opacity-80 mb-6">AI music generation platform. MusicVAE + WaveNet, WebAudio API, real-time synthesis.</p>
+              <div class="flex gap-4">
+                <a href="#" class="glass px-6 py-2 rounded-xl text-sm neon-glow">Live Demo</a>
+                <a href="#" class="border border-white/30 px-6 py-2 rounded-xl text-sm hover:neon-glow">Code</a>
+              </div>
+            </div>
+          </div>
+          <button class="absolute left-0 top-1/2 -translate-y-1/2 glass p-3 rounded-full neon-glow hover:scale-110" id="prevBtn">‹</button>
+          <button class="absolute right-0 top-1/2 -translate-y-1/2 glass p-3 rounded-full neon-glow hover:scale-110" id="nextBtn">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="py-32 px-6 md:px-12 bg-black/30">
+      <h2 class="text-5xl font-orbitron font-black neon-text text-center mb-20">VECTOR ENDORSEMENTS</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="testimonials-carousel flex gap-8 overflow-hidden" id="testimonialsCarousel">
+          <div class="glass p-12 rounded-3xl text-center min-w-[90%] md:min-w-[70%] cyber-hover">
+            <p class="text-xl italic mb-6 opacity-90">"Voss doesn't code interfaces, he manifests digital dimensions. NeuraLux redefined luxury AI."</p>
+            <div class="font-orbitron font-black neon-text text-lg">— Neuralink CTO</div>
+          </div>
+          <div class="glass p-12 rounded-3xl text-center min-w-[90%] md:min-w-[70%] cyber-hover">
+            <p class="text-xl italic mb-6 opacity-90">"QuantumVault sets the MPC standard. Production hardened across 50+ chains."</p>
+            <div class="font-orbitron font-black neon-text text-lg">— a16z Crypto Lead</div>
+          </div>
+          <div class="glass p-12 rounded-3xl text-center min-w-[90%] md:min-w-[70%] cyber-hover">
+            <p class="text-xl italic mb-6 opacity-90">"CyberDeck shaders run 120fps mobile. Pure visual sorcery."</p>
+            <div class="font-orbitron font-black neon-text text-lg">— Unity WebGPU Team</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-32 px-6 md:px-12">
+      <div class="max-w-2xl mx-auto text-center glass p-12 md:p-20 rounded-3xl cyber-hover">
+        <h2 class="text-5xl font-orbitron font-black neon-text mb-8">NEURAL LINK</h2>
+        <p class="text-xl opacity-90 mb-12">Commission cyber luxury. Let's architect the invisible.</p>
+        <form name="contact" method="POST" data-netlify="true" class="space-y-6 max-w-lg mx-auto">
+          <input type="hidden" name="form-name" value="contact">
+          <div class="grid md:grid-cols-2 gap-6">
+            <input type="text" name="name" placeholder="Callsign" required class="glass p-4 rounded-2xl w-full border-none focus:neon-glow outline-none" aria-label="Name">
+            <input type="email" name="email" placeholder="neural@link.ai" required class="glass p-4 rounded-2xl w-full border-none focus:neon-glow outline-none" aria-label="Email">
+          </div>
+          <textarea name="message" rows="5" placeholder="Mission briefing..." required class="glass p-4 rounded-2xl w-full border-none focus:neon-glow outline-none resize-none" aria-label="Message"></textarea>
+          <a href="data:application/pdf;base64,JVBERi0xLjQKJcOkw7zDtMOs/..." download="alexander-voss-cyber-resume.pdf" class="block glass max-w-max mx-auto px-8 py-4 rounded-2xl mb-6 neon-glow hover:glitch">Download Neural Spec →</a>
+          <button type="submit" class="glass w-full p-6 rounded-2xl font-exo font-600 text-xl neon-glow hover:glitch hover:scale-105 transition-all">TRANSMIT</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass py-12 px-6 md:px-12 mt-32 border-t border-white/10">
+    <div class="max-w-6xl mx-auto text-center space-y-6">
+      <div class="flex justify-center space-x-8 mb-8">
+        <a href="https://linkedin.com" class="neon-glow hover:scale-110 transition-all">💼</a>
+        <a href="https://twitter.com" class="neon-glow hover:scale-110 transition-all">🐦</a>
+        <a href="https://github.com" class="neon-glow hover:scale-110 transition-all">🐙</a>
+        <a href="#" class="neon-glow hover:scale-110 transition-all">📜</a>
+      </div>
+      <div class="text-sm opacity-60">Alexander Voss © 2026. All neural pathways reserved. Built with cyber luxury precision.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r161/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero Globe
+    let scene, camera, renderer, globe;
+    function initGlobe() {
+      const canvas = document.getElementById('heroGlobe');
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      
+      const geometry = new THREE.SphereGeometry(2, 64, 64);
+      const material = new THREE.MeshBasicMaterial({ color: 0x8b5cf6, wireframe: true });
+      globe = new THREE.Mesh(geometry, material);
+      scene.add(globe);
+      
+      camera.position.z = 5;
+      function animate() {
+        requestAnimationFrame(animate);
+        globe.rotation.y += 0.005;
+        globe.rotation.x += 0.002;
+        renderer.render(scene, camera);
+      }
+      animate();
+      
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    }
+
+    // Particles.js
+    particlesJS('particles-js', {
+      particles: { number: { value: 80 }, color: { value: '#8b5cf6' }, shape: { type: 'circle' },
+        opacity: { value: 0.5, anim: { enable: true } }, size: { value: 3 }, move: { speed: 1 } },
+      interactivity: { detect_on: 'canvas', events: { onhover: { enable: true, mode: 'repulse' } } }
+    });
+
+    // GSAP Animations
+    gsap.from('h1, h2, h3', { duration: 1.5, y: 100, opacity: 0, stagger: 0.2, ease: 'power3.out' });
+    gsap.from('.carousel-item', { duration: 1, scale: 0.8, opacity: 0, stagger: 0.1, ease: 'back.out(1.7)' });
+
+    ScrollTrigger.create({
+      trigger: 'main',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: true,
+      onUpdate: self => gsap.to('.glass', { scale: 1 + self.progress * 0.1 })
+    });
+
+    // Glitch Hover
+    document.querySelectorAll('.cyber-hover').forEach(el => {
+      el.addEventListener('mouseenter', () => gsap.to(el, { scale: 1.05, duration: 0.3, yoyo: true, repeat: 1 }));
+      el.addEventListener('mousemove', e => {
+        gsap.to(el, { x: e.clientX * 0.01, y: e.clientY * 0.01, duration: 0.5 });
+      });
+    });
+
+    // Projects Carousel
+    let projectIndex = 0;
+    const projects = document.querySelectorAll('.carousel-item');
+    document.getElementById('nextBtn').onclick = () => {
+      projectIndex = (projectIndex + 1) % projects.length;
+      gsap.to('.carousel-track', { x: -projectIndex * 33 + '%', duration: 0.8, ease: 'power3.out' });
+    };
+    document.getElementById('prevBtn').onclick = () => {
+      projectIndex = (projectIndex - 1 + projects.length) % projects.length;
+      gsap.to('.carousel-track', { x: -projectIndex * 33 + '%', duration: 0.8, ease: 'power3.out' });
+    };
+
+    // Testimonials Auto Carousel
+    gsap.to('#testimonialsCarousel', {
+      x: '-33%',
+      duration: 20,
+      repeat: -1,
+      ease: 'none'
+    });
+
+    // PWA Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+
+    // Mobile Menu (stub)
+    document.querySelector('button[aria-label="menu"]').onclick = () => {};
+
+    // Netlify Form Success
+    window.addEventListener('load', () => {
+      if (window.location.search.includes('message')) {
+        gsap.from('form', { scale: 0.95, duration: 0.5, y: 20 });
+      }
+    });
+
+    initGlobe();
+  </script>
+
+  <script>
+    // PWA Service Worker Stub (inline for Netlify)
+    const swCode = `const CACHE_NAME = 'cyber-portfolio-v1';
+self.addEventListener('install', e => e.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(['/', '/index.html']))));
+self.addEventListener('fetch', e => e.respondWith(caches.match(e.request).then(r => r || fetch(e.request))));
+self.addEventListener('message', e => { if (e.data === 'skipWaiting') self.skipWaiting(); });`;
+    if ('serviceWorker' in navigator && location.hostname === 'localhost') {
+      const blob = new Blob([swCode], { type: 'application/javascript' });
+      navigator.serviceWorker.register(URL.createObjectURL(blob));
+    }
+  </script>
+</body>
+</html>
+```
