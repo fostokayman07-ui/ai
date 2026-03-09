@@ -3,494 +3,525 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayman Fostok - Supreme Cybersecurity Empire</title>
-  <meta name="description" content="Luxury cybersecurity visionary. OSINT mastery, AI orchestration, elite investigations. PistaSecure &amp; beyond.">
-  <meta name="keywords" content="cybersecurity luxury, OSINT elite, AI automation, PistaSecure, Ayman Fostok, threat intelligence">
-  <meta property="og:title" content="Ayman Fostok - Supreme Cybersecurity Empire">
-  <meta property="og:description" content="Redefining cyber defense with unparalleled luxury &amp; precision.">
-  <meta property="og:type" content="website">
+  <title>Ayman Fostok | Cyber Noir Empire</title>
+  <meta name="description" content="Cybersecurity sovereign. OSINT phantom. AI overlord. PistaSecure architect. Enter the noir realm of elite defense.">
+  <meta name="keywords" content="cybersecurity noir, OSINT phantom, AI overlord, PistaSecure, Ayman Fostok, cyber luxury, threat empire">
+  <meta name="author" content="Ayman Fostok">
+  <meta property="og:title" content="Ayman Fostok | Cyber Noir Empire">
+  <meta property="og:description" content="Phantom operations in cyber shadows. Unrivaled luxury defense.">
+  <meta property="og:image" content="https://fostokayman07-ui.github.io/ai/og-image.jpg">
   <meta property="og:url" content="https://fostokayman07-ui.github.io/ai/">
   <link rel="canonical" href="https://fostokayman07-ui.github.io/ai/">
-  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiM2NjdlZWEiLz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iNyIvPgo8cG9seWxpbmUgcG9pbnRzPSIxMiA5IDExIDExIDEzIDExIDEzIDEzIDExIDEzIDExIDE1IDEzIDE1IDEzIDE3IDEyIDE3IDEyIDE5IDEzIDE5IDEzIDIxIDE1IDIxIDE1IDE5IDE3IDE5IDE3IDE3IDE5IDE3IDE1IDE5IDE1IDE1IDE3IDEzIDE1IDEzIDEzIDE1IDExIDE1IDExIDEzIDExIDEzIDkgMTIiLz4KPC9zdmc+Cjwvc3ZnPgo=">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiMwMGZmZmYiLz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iNyIvPgo8cG9seWxpbmUgcG9pbnRzPSIxMiA5IDExIDExIDEzIDExIDEzIDEzIDExIDEzIDExIDE1IDEzIDE1IDEzIDE3IDEyIDE3IDEyIDE5IDEzIDE5IDEzIDIxIDE1IDIxIDE1IDE5IDE3IDE5IDE3IDE3IDE5IDE3IDE1IDE5IDE1IDE1IDE3IDEzIDE1IDEzIDEzIDE1IDExIDE1IDExIDEzIDExIDEzIDkgMTIiLz4KPC9zdmc+Cjwvc3ZnPgo=">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;family=Cinzel:wght@400;600;800&amp;display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 30%, #667eea 60%, #764ba2 100%);
-      --secondary-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
-      --accent-gold: linear-gradient(45deg, #ffd700, #ffed4a, #f4d03f);
-      --accent-neon: linear-gradient(45deg, #00f5ff, #667eea, #ff00ff);
-      --glass-bg: rgba(255, 255, 255, 0.15);
-      --glass-border: rgba(255, 255, 255, 0.25);
-      --shadow-lux: 0 35px 80px rgba(255, 215, 0, 0.4), 0 0 50px rgba(102, 126, 234, 0.3);
-      --shadow-neon: 0 25px 60px rgba(0, 245, 255, 0.4);
+      --noir-bg: #000011;
+      --noir-gradient: linear-gradient(135deg, #000011 0%, #0a0a1f 50%, #1a0033 100%);
+      --neon-cyan: #00ffff;
+      --neon-purple: #aa00ff;
+      --neon-gold: #ffd700;
+      --holo-glass: rgba(0, 255, 255, 0.08);
+      --holo-border: rgba(0, 255, 255, 0.2);
+      --shadow-holo: 0 0 50px rgba(0, 255, 255, 0.5), 0 0 100px rgba(170, 0, 255, 0.3);
+      --shadow-gold: 0 0 60px rgba(255, 215, 0, 0.6);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { 
       font-family: 'Inter', sans-serif; 
-      background: radial-gradient(ellipse at center, #0f0f23 0%, var(--primary-gradient)); 
-      color: white; 
+      background: var(--noir-gradient); 
+      color: #e0e0ff; 
       overflow-x: hidden;
+      line-height: 1.6;
     }
-    .glass { 
-      background: var(--glass-bg); 
-      backdrop-filter: blur(30px) saturate(180%); 
-      border: 1px solid var(--glass-border); 
-      box-shadow: var(--shadow-lux);
+    .holo-glass { 
+      background: var(--holo-glass); 
+      backdrop-filter: blur(40px) saturate(200%); 
+      border: 1px solid var(--holo-border); 
+      box-shadow: var(--shadow-holo);
     }
-    .lux-gold { 
-      background: var(--accent-gold); 
+    .noir-gold { 
+      background: linear-gradient(45deg, var(--neon-gold), #ffaa00); 
       -webkit-background-clip: text; 
       -webkit-text-fill-color: transparent; 
       background-clip: text; 
       font-family: 'Cinzel', serif;
+      text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    }
+    .noir-cyan { 
+      color: var(--neon-cyan); 
+      text-shadow: 0 0 20px var(--neon-cyan);
     }
     .hero { 
       min-height: 100vh; 
       display: flex; 
+      flex-direction: column; 
       align-items: center; 
       justify-content: center; 
       position: relative; 
       overflow: hidden; 
+      padding: 0 2rem;
     }
-    #particles-js, #hero-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
-    .hero-content { z-index: 3; text-align: center; max-width: 900px; padding: 0 20px; }
-    h1 { 
-      font-size: clamp(5rem, 12vw, 10rem); 
+    #particles-js { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+    .hero-content { z-index: 3; text-align: center; max-width: 1000px; }
+    .typing-title {
+      font-family: 'Orbitron', monospace;
+      font-size: clamp(4rem, 10vw, 9rem); 
       font-weight: 900; 
-      margin-bottom: 1.5rem; 
-      letter-spacing: -0.08em; 
-      lux-gold;
+      margin-bottom: 1rem; 
+      border-right: 4px solid var(--neon-cyan);
+      animation: blink 1s infinite;
+      noir-cyan;
     }
+    @keyframes blink { 50% { border-color: transparent; } }
     .subtitle { 
-      font-size: clamp(1.5rem, 4vw, 2.5rem); 
-      opacity: 0.95; 
-      margin-bottom: 4rem; 
-      font-weight: 300; 
-      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 2.2rem); 
+      opacity: 0.9; 
+      margin-bottom: 3rem; 
+      font-weight: 400; 
     }
-    .cta { 
-      display: inline-block; 
-      padding: 2rem 4rem; 
-      background: linear-gradient(45deg, rgba(255,215,0,0.2), rgba(255,255,255,0.1)); 
-      backdrop-filter: blur(30px); 
-      border: 2px solid rgba(255,215,0,0.5); 
-      border-radius: 60px; 
-      font-size: 1.4rem; 
+    .cta-hero { 
+      padding: 1.8rem 3.5rem; 
+      background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple)); 
+      border: none; 
+      border-radius: 50px; 
+      font-size: 1.3rem; 
       font-weight: 700; 
-      font-family: 'Cinzel', serif;
-      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); 
-      box-shadow: var(--shadow-lux);
-      position: relative;
-      overflow: hidden;
-    }
-    .cta::before {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%; width: 100%; height: 100%; 
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-      transition: left 0.6s;
-    }
-    .cta:hover::before { left: 100%; }
-    .cta:hover { 
-      transform: scale(1.1) translateY(-10px) rotate(2deg); 
-      box-shadow: 0 50px 100px rgba(255,215,0,0.6); 
-      border-color: #ffd700;
-    }
-    section { padding: 140px 0; position: relative; }
-    .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
-    .section-title { 
-      font-size: clamp(4rem, 7vw, 6rem); 
-      font-weight: 900; 
-      text-align: center; 
-      margin-bottom: 5rem; 
-      lux-gold; 
-      font-family: 'Cinzel', serif;
-      position: relative;
-    }
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 100px; height: 4px; background: var(--accent-gold); 
-      margin: 1rem auto; border-radius: 2px;
-    }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 3rem; }
-    .card { 
-      glass; 
-      padding: 3rem; 
-      border-radius: 32px; 
-      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1); 
-      position: relative;
-      overflow: hidden;
-    }
-    .card::before {
-      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-      background: conic-gradient(from 0deg, transparent, rgba(255,215,0,0.1), transparent);
-      opacity: 0; transition: opacity 0.8s;
-    }
-    .card:hover::before { opacity: 1; animation: spin 4s linear infinite; }
-    @keyframes spin { 100% { transform: rotate(360deg); } }
-    .card:hover { 
-      transform: translateY(-30px) rotateX(10deg) rotateY(10deg) scale(1.02); 
-      box-shadow: var(--shadow-neon); 
-    }
-    .skills-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-    .progress { 
-      height: 12px; 
-      background: rgba(255,255,255,0.15); 
-      border-radius: 8px; 
+      font-family: 'Orbitron', monospace;
+      color: #000; 
+      cursor: pointer; 
+      position: relative; 
       overflow: hidden; 
-      margin-top: 1rem; 
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+      box-shadow: var(--shadow-holo);
     }
-    .progress-bar { 
-      height: 100%; 
-      background: var(--accent-neon); 
-      border-radius: 8px; 
-      transition: width 3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    .cta-hero::after {
+      content: ''; position: absolute; top: 50%; left: 50%; 
+      width: 0; height: 0; 
+      background: rgba(255,255,255,0.3); 
+      border-radius: 50%; 
+      transform: translate(-50%, -50%); 
+      transition: width 0.6s, height 0.6s;
+    }
+    .cta-hero:hover::after { width: 300px; height: 300px; }
+    .cta-hero:hover { transform: translateY(-5px) scale(1.05); box-shadow: var(--shadow-gold); }
+    .section-padding { padding: 160px 0; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+    .section-title { 
+      font-size: clamp(3.5rem, 6vw, 5.5rem); 
+      font-weight: 800; 
+      text-align: center; 
+      margin-bottom: 6rem; 
+      noir-gold; 
+      font-family: 'Orbitron', monospace;
+    }
+    .section-title::after { 
+      content: ''; 
+      display: block; 
+      width: 150px; height: 3px; 
+      background: linear-gradient(90deg, var(--neon-cyan), var(--neon-gold)); 
+      margin: 1.5rem auto; 
+      border-radius: 2px; 
       box-shadow: 0 0 20px currentColor;
     }
-    .projects { background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(15,15,35,0.7)); }
-    .lottie-container { width: 120px; height: 120px; margin: 0 auto 1rem; }
-    .contact-form { max-width: 700px; margin: 0 auto; }
-    .contact-form input, .contact-form textarea { 
-      width: 100%; 
-      padding: 2rem; 
-      margin-bottom: 2rem; 
-      background: rgba(255,255,255,0.08); 
-      border: 2px solid rgba(255,255,255,0.2); 
-      border-radius: 20px; 
-      color: white; 
-      font-size: 1.1rem; 
-      transition: all 0.4s; 
-      backdrop-filter: blur(10px);
-    }
-    .contact-form input:focus, .contact-form textarea:focus { 
-      outline: none; 
-      border-color: #ffd700; 
-      box-shadow: 0 0 30px rgba(255,215,0,0.5); 
-      transform: scale(1.02);
-    }
-    .btn-primary { 
-      background: var(--accent-gold); 
-      padding: 2rem 4rem; 
-      border: none; 
-      border-radius: 60px; 
-      color: #1e1e1e; 
-      font-size: 1.3rem; 
-      font-weight: 800; 
-      font-family: 'Cinzel', serif;
-      cursor: pointer; 
-      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); 
-      box-shadow: var(--shadow-lux); 
-      width: 100%;
-    }
-    .btn-primary:hover { 
-      transform: scale(1.1) translateY(-8px); 
-      box-shadow: 0 60px 120px rgba(255,215,0,0.7); 
-    }
-    footer { 
-      background: linear-gradient(180deg, rgba(0,0,0,0.8), transparent); 
-      padding: 4rem 0 2rem; 
-      text-align: center; 
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; }
+    .holo-card { 
+      holo-glass; 
+      padding: 3.5rem 2.5rem; 
+      border-radius: 24px; 
+      transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
       position: relative;
     }
-    .social-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; }
-    .social-links a { 
-      width: 60px; height: 60px; 
-      background: rgba(255,255,255,0.1); 
-      border-radius: 50%; 
-      display: flex; align-items: center; justify-content: center; 
-      transition: all 0.4s; 
-      backdrop-filter: blur(20px);
+    .holo-card::before {
+      content: ''; 
+      position: absolute; 
+      inset: -2px; 
+      background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-gold), var(--neon-cyan)); 
+      border-radius: 26px; 
+      z-index: -1; 
+      opacity: 0; 
+      transition: opacity 0.7s;
     }
-    .social-links a:hover { 
-      transform: translateY(-10px) scale(1.2); 
-      background: var(--accent-gold); 
-      box-shadow: var(--shadow-neon);
+    .holo-card:hover::before { opacity: 1; }
+    .holo-card:hover { 
+      transform: translateY(-25px) rotateX(8deg); 
+      box-shadow: var(--shadow-gold); 
     }
-    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
-    .float { animation: float 6s ease-in-out infinite; }
+    .skill-item {
+      display: flex; justify-content: space-between; align-items: center; 
+      margin-bottom: 1.5rem;
+    }
+    .skill-bar { 
+      flex: 1; height: 10px; background: rgba(255,255,255,0.1); 
+      border-radius: 5px; overflow: hidden; margin-left: 1rem;
+    }
+    .skill-fill { 
+      height: 100%; 
+      background: linear-gradient(90deg, var(--neon-cyan), var(--neon-gold)); 
+      border-radius: 5px; 
+      transition: width 2.5s ease-out; 
+      box-shadow: 0 0 15px currentColor;
+    }
+    .projects-grid { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+    .project-link { 
+      display: block; 
+      noir-gold; 
+      font-size: 1.1rem; 
+      margin-top: 1rem; 
+      text-decoration: none;
+    }
+    .project-link:hover { text-shadow: 0 0 20px var(--neon-gold); }
+    .testimonial-carousel { 
+      display: flex; overflow: hidden; max-width: 800px; margin: 4rem auto; 
+      border-radius: 20px; 
+    }
+    .testimonial { 
+      min-width: 100%; padding: 3rem; text-align: center; opacity: 0.7; transition: all 0.8s; 
+    }
+    .testimonial.active { opacity: 1; transform: scale(1.05); }
+    .contact-form { max-width: 800px; margin: 0 auto; }
+    .form-group { position: relative; margin-bottom: 2.5rem; }
+    .form-group input, .form-group textarea { 
+      width: 100%; padding: 1.5rem 1rem 1.5rem 3rem; 
+      background: rgba(0,255,255,0.05); 
+      border: 1px solid var(--holo-border); 
+      border-radius: 16px; 
+      color: #e0e0ff; 
+      font-size: 1rem; 
+      transition: all 0.4s;
+    }
+    .form-group input:focus, .form-group textarea:focus { 
+      outline: none; 
+      border-color: var(--neon-cyan); 
+      box-shadow: var(--shadow-holo); 
+      background: rgba(0,255,255,0.1);
+    }
+    .form-icon { 
+      position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); 
+      color: var(--neon-cyan); opacity: 0.6;
+    }
+    .submit-btn { 
+      background: linear-gradient(45deg, var(--neon-purple), var(--neon-cyan)); 
+      border: none; 
+      padding: 1.8rem 4rem; 
+      border-radius: 50px; 
+      color: #000; 
+      font-weight: 700; 
+      font-size: 1.2rem; 
+      font-family: 'Orbitron', monospace;
+      cursor: pointer; 
+      width: 100%; 
+      box-shadow: var(--shadow-holo);
+      transition: all 0.5s;
+    }
+    .submit-btn:hover { 
+      transform: translateY(-5px) scale(1.02); 
+      box-shadow: var(--shadow-gold);
+    }
+    footer { 
+      padding: 5rem 0 2rem; 
+      text-align: center; 
+      border-top: 1px solid var(--holo-border);
+    }
+    .social-grid { 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+      gap: 1.5rem; max-width: 600px; margin: 3rem auto 0;
+    }
+    .social-btn { 
+      display: flex; flex-direction: column; align-items: center; 
+      padding: 1.5rem; 
+      background: var(--holo-glass); 
+      border-radius: 20px; 
+      text-decoration: none; 
+      color: inherit; 
+      transition: all 0.4s;
+    }
+    .social-btn:hover { 
+      transform: translateY(-10px); 
+      box-shadow: var(--shadow-holo); 
+      background: rgba(0,255,255,0.15);
+    }
+    @media (max-width: 768px) { 
+      .grid-2 { grid-template-columns: 1fr; } 
+      .section-padding { padding: 100px 0; }
+    }
   </style>
 </head>
 <body>
-  <nav class="glass fixed top-0 w-full z-50 py-6 px-8 transition-all duration-500">
+  <!-- Loading Screen -->
+  <div id="loader" style="position: fixed; inset: 0; background: var(--noir-bg); z-index: 9999; display: flex; align-items: center; justify-content: center; font-family: 'Orbitron', monospace; font-size: 2rem; noir-cyan;">
+    Initializing Noir Protocol...
+  </div>
+
+  <nav class="fixed top-0 w-full z-50 py-6 transition-all duration-1000 holo-glass px-8">
     <div class="container flex justify-between items-center">
-      <h2 class="text-3xl font-black lux-gold drop-shadow-lg">AF</h2>
-      <ul class="flex space-x-12">
-        <li><a href="#home" class="text-xl font-semibold hover:lux-gold transition-all duration-300 hover:scale-110">Home</a></li>
-        <li><a href="#about" class="text-xl font-semibold hover:lux-gold transition-all duration-300 hover:scale-110">About</a></li>
-        <li><a href="#skills" class="text-xl font-semibold hover:lux-gold transition-all duration-300 hover:scale-110">Skills</a></li>
-        <li><a href="#projects" class="text-xl font-semibold hover:lux-gold transition-all duration-300 hover:scale-110">Projects</a></li>
-        <li><a href="#contact" class="text-xl font-semibold hover:lux-gold transition-all duration-300 hover:scale-110">Contact</a></li>
+      <div class="text-2xl font-black noir-gold">AF Empire</div>
+      <ul class="flex space-x-8 lg:space-x-12">
+        <li><a href="#home" class="font-semibold hover:noir-cyan transition-all duration-300 hover:scale-110">Phantom</a></li>
+        <li><a href="#about" class="font-semibold hover:noir-cyan transition-all duration-300 hover:scale-110">Origin</a></li>
+        <li><a href="#skills" class="font-semibold hover:noir-cyan transition-all duration-300 hover:scale-110">Arsenal</a></li>
+        <li><a href="#projects" class="font-semibold hover:noir-cyan transition-all duration-300 hover:scale-110">Vault</a></li>
+        <li><a href="#testimonials" class="font-semibold hover:noir-cyan transition-all duration-300 hover:scale-110">Echoes</a></li>
+        <li><a href="#contact" class="font-semibold hover:noir-cyan transition-all duration-300 hover:scale-110">Cipher</a></li>
       </ul>
     </div>
   </nav>
 
   <section id="home" class="hero">
     <div id="particles-js"></div>
-    <canvas id="hero-canvas"></canvas>
     <div class="hero-content">
-      <div class="float mb-8" style="font-size: 1.5rem; opacity: 0.8;">🔒 Supreme Cyber Empire</div>
-      <h1>Cybersecurity<br><span class="lux-gold">Monarch</span></h1>
-      <p class="subtitle">Mastering OSINT • Orchestrating AI • Conquering Threats</p>
-      <a href="#contact" class="cta">Enter the Vault</a>
+      <div class="typing-title" id="hero-title">CYBER NOIR EMPIRE</div>
+      <p class="subtitle">OSINT Shadows • AI Dominion • Threat Annihilation</p>
+      <button class="cta-hero" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        Breach the Matrix
+      </button>
     </div>
   </section>
 
-  <section id="about" class="py-24 relative">
+  <section id="about" class="section-padding">
     <div class="container">
-      <h2 class="section-title">The Visionary</h2>
-      <div class="grid">
-        <div class="card">
-          <h3 class="text-4xl font-bold mb-6 lux-gold">Ayman Fostok</h3>
-          <p class="text-lg leading-relaxed mb-6">Architect of PistaSecure. OSINT virtuoso. AI automation pioneer. Transforming global cyber defense with luxury precision and unrelenting intelligence.</p>
-          <div class="flex gap-6">
-            <span class="px-4 py-2 bg-gold/20 rounded-full text-sm font-semibold">15+ Years</span>
-            <span class="px-4 py-2 bg-blue-500/20 rounded-full text-sm font-semibold">Global Ops</span>
+      <h2 class="section-title">Phantom Origin</h2>
+      <div class="grid-2">
+        <div class="holo-card">
+          <h3 class="text-4xl font-bold mb-6 noir-gold mb-8">Ayman Fostok</h3>
+          <p class="text-lg leading-relaxed mb-8 opacity-90">Noir architect of PistaSecure. OSINT specter navigating digital abyss. AI conductor of autonomous legions. Forging unbreakable cyber fortresses in eternal night.</p>
+          <div class="flex flex-wrap gap-4">
+            <span class="px-6 py-3 bg-cyan/10 border border-cyan/30 rounded-full text-sm font-mono">20+ Ops</span>
+            <span class="px-6 py-3 bg-purple/10 border border-purple/30 rounded-full text-sm font-mono">Global Reach</span>
+            <span class="px-6 py-3 bg-gold/10 border border-gold/30 rounded-full text-sm font-mono">AI Sovereign</span>
           </div>
         </div>
-        <div class="card">
-          <h3 class="text-4xl font-bold mb-6 lux-gold">Empire Blueprint</h3>
-          <p class="text-lg leading-relaxed">Elite investigations. Scalable business ops. AI-driven threat hunting. Building the future of secure luxury.</p>
-          <div class="lottie-container mt-6">
-            <div id="about-lottie"></div>
+        <div class="holo-card">
+          <h3 class="text-4xl font-bold mb-8 noir-gold">Noir Mandate</h3>
+          <p class="text-lg leading-relaxed opacity-90">Eradicate digital threats. Automate intelligence empires. Elevate business to noir supremacy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section-padding bg-gradient-to-b from-black/50 to-transparent">
+    <div class="container">
+      <h2 class="section-title">Arsenal Spectrum</h2>
+      <div class="grid-3">
+        <div class="holo-card">
+          <h4 class="text-3xl font-bold mb-6 noir-gold">Cyber Defense</h4>
+          <div class="skill-item">
+            <span class="font-mono">98%</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="98%"></div></div>
+          </div>
+        </div>
+        <div class="holo-card">
+          <h4 class="text-3xl font-bold mb-6 noir-gold">OSINT Phantom</h4>
+          <div class="skill-item">
+            <span class="font-mono">96%</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="96%"></div></div>
+          </div>
+        </div>
+        <div class="holo-card">
+          <h4 class="text-3xl font-bold mb-6 noir-gold">AI Overlord</h4>
+          <div class="skill-item">
+            <span class="font-mono">95%</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
+          </div>
+        </div>
+        <div class="holo-card">
+          <h4 class="text-3xl font-bold mb-6 noir-gold">Investigations</h4>
+          <div class="skill-item">
+            <span class="font-mono">99%</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="99%"></div></div>
+          </div>
+        </div>
+        <div class="holo-card">
+          <h4 class="text-3xl font-bold mb-6 noir-gold">DevOps Noir</h4>
+          <div class="skill-item">
+            <span class="font-mono">93%</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="93%"></div></div>
+          </div>
+        </div>
+        <div class="holo-card">
+          <h4 class="text-3xl font-bold mb-6 noir-gold">Ops Empire</h4>
+          <div class="skill-item">
+            <span class="font-mono">91%</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="91%"></div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="skills" class="py-24 bg-gradient-to-b from-transparent to-black/30">
+  <section id="projects" class="section-padding">
     <div class="container">
-      <h2 class="section-title">Mastery Spectrum</h2>
-      <div class="grid skills-grid">
-        <div class="card">
-          <div class="lottie-container"><div id="cyber-lottie"></div></div>
-          <h3 class="text-3xl font-bold mb-4 lux-gold">Cybersecurity</h3>
-          <div class="progress"><div class="progress-bar" data-width="98%"></div></div>
+      <h2 class="section-title">Noir Vault</h2>
+      <div class="projects-grid grid-3">
+        <div class="holo-card">
+          <h3 class="text-3xl font-bold mb-6 noir-gold">PistaSecure</h3>
+          <p class="opacity-90 mb-6">AI sentinel vs IP phantoms, phishing voids, fraud abysses.</p>
+          <a href="#" class="project-link">→ Shadow Repo</a>
         </div>
-        <div class="card">
-          <div class="lottie-container"><div id="osint-lottie"></div></div>
-          <h3 class="text-3xl font-bold mb-4 lux-gold">OSINT</h3>
-          <div class="progress"><div class="progress-bar" data-width="96%"></div></div>
+        <div class="holo-card">
+          <h3 class="text-3xl font-bold mb-6 noir-gold">OpenClaw AI</h3>
+          <p class="opacity-90 mb-6">Autonomous noir agent. OSINT/invest automation core.</p>
+          <a href="#" class="project-link">→ Deploy Matrix</a>
         </div>
-        <div class="card">
-          <div class="lottie-container"><div id="ai-lottie"></div></div>
-          <h3 class="text-3xl font-bold mb-4 lux-gold">AI Automation</h3>
-          <div class="progress"><div class="progress-bar" data-width="94%"></div></div>
-        </div>
-        <div class="card">
-          <div class="lottie-container"><div id="invest-lottie"></div></div>
-          <h3 class="text-3xl font-bold mb-4 lux-gold">Investigations</h3>
-          <div class="progress"><div class="progress-bar" data-width="99%"></div></div>
-        </div>
-        <div class="card">
-          <h3 class="text-3xl font-bold mb-4 lux-gold">DevOps</h3>
-          <div class="progress"><div class="progress-bar" data-width="92%"></div></div>
-        </div>
-        <div class="card">
-          <h3 class="text-3xl font-bold mb-4 lux-gold">Business Ops</h3>
-          <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+        <div class="holo-card">
+          <h3 class="text-3xl font-bold mb-6 noir-gold">StafficMedia</h3>
+          <p class="opacity-90 mb-6">Social empire accelerator. Analytics in shadows.</p>
+          <a href="#" class="project-link">→ Growth Void</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="projects py-24">
+  <section id="testimonials" class="section-padding bg-gradient-to-t from-black/70">
     <div class="container">
-      <h2 class="section-title">Crown Jewels</h2>
-      <div class="grid">
-        <div class="card">
-          <h3 class="text-4xl font-bold mb-6 lux-gold">PistaSecure</h3>
-          <p class="text-lg mb-6">AI fortress against IP threats, phishing empires, fraud dynasties. Global sentinel.</p>
-          <div class="progress" style="background: rgba(0,255,0,0.2);"><div class="progress-bar" style="width:100%; background: lime;"></div></div>
+      <h2 class="section-title">Echoes from Abyss</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial">
+          <p class="text-xl italic opacity-90 mb-6">&quot;Transformed our cyber posture overnight. Noir genius.&quot;</p>
+          <span class="noir-cyan font-semibold">- Fortune 500 CISO</span>
         </div>
-        <div class="card">
-          <h3 class="text-4xl font-bold mb-6 lux-gold">OpenClaw AI</h3>
-          <p class="text-lg mb-6">Autonomous agent empire. OSINT automation. Investigation accelerator.</p>
+        <div class="testimonial">
+          <p class="text-xl italic opacity-90 mb-6">&quot;OSINT mastery beyond comprehension. Empire level.&quot;</p>
+          <span class="noir-cyan font-semibold">- Intel Agency Lead</span>
         </div>
-        <div class="card">
-          <h3 class="text-4xl font-bold mb-6 lux-gold">StafficMedia</h3>
-          <p class="text-lg mb-6">Social dominance engine. Analytics-fueled growth monarch.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-4xl font-bold mb-6 lux-gold">Twitter OSINT Vault</h3>
-          <p class="text-lg">API mastery. Real-time intel extraction. Surveillance sovereign.</p>
+        <div class="testimonial">
+          <p class="text-xl italic opacity-90 mb-6">&quot;AI automation redefined. Seamless noir ops.&quot;</p>
+          <span class="noir-cyan font-semibold">- Tech Unicorn CTO</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-24 relative">
+  <section id="contact" class="section-padding pb-32">
     <div class="container">
-      <h2 class="section-title">Royal Decree</h2>
-      <form class="contact-form glass p-12 rounded-3xl">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="6" placeholder="Strategic Alliance Proposal..." required></textarea>
-        <button type="submit" class="btn-primary text-2xl">Initiate Contact Protocol</button>
+      <h2 class="section-title">Cipher Channel</h2>
+      <form class="contact-form holo-glass p-12 rounded-3xl">
+        <div class="form-group">
+          <svg class="form-icon w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+          <input type="text" placeholder="Operative Alias" required>
+        </div>
+        <div class="form-group">
+          <svg class="form-icon w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+          <input type="email" placeholder="Secure Vector" required>
+        </div>
+        <div class="form-group">
+          <svg class="form-icon w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+          <textarea rows="5" placeholder="Mission Brief" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Transmit Directive</button>
       </form>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <h3 class="text-3xl font-bold mb-8 lux-gold">Ayman Fostok Empire</h3>
-      <p class="opacity-80 mb-12">&copy; 2026. All domains secured. 🔒</p>
-      <div class="social-links">
-        <a href="https://github.com/fostokayman07-ui" target="_blank">📂</a>
-        <a href="https://linkedin.com/in/ayman-fostok" target="_blank">💼</a>
-        <a href="https://twitter.com/fostokayman07" target="_blank">🐦</a>
-        <a href="mailto:fostokayman07@gmail.com">📧</a>
+      <h3 class="text-3xl mb-8 noir-gold">Noir Empire Secured</h3>
+      <p class="opacity-70 mb-12 max-w-2xl mx-auto">© 2026 Ayman Fostok. All transmissions encrypted. 🔒</p>
+      <div class="social-grid">
+        <a href="https://github.com/fostokayman07-ui/ai" class="social-btn" target="_blank">
+          <span>🐱‍💻</span> GitHub
+        </a>
+        <a href="#" class="social-btn" target="_blank">
+          <span>💼</span> LinkedIn
+        </a>
+        <a href="#" class="social-btn" target="_blank">
+          <span>🧵</span> Twitter
+        </a>
+        <a href="mailto:fostokayman07@gmail.com" class="social-btn">
+          <span>📡</span> Email
+        </a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Particles.js cyber theme
+    // Loader
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.opacity = '0';
+      setTimeout(() => document.getElementById('loader').remove(), 500);
+    });
+
+    // Particles - neon cyber
     particlesJS('particles-js', {
       particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: ['#ffd700', '#00f5ff', '#667eea', '#ff00ff'] },
-        shape: { type: 'circle', stroke: { width: 0, color: '#000000' } },
-        opacity: { value: 0.5, random: true },
-        size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 150, color: '#ffd700', opacity: 0.4, width: 1 },
-        move: { enable: true, speed: 2, direction: 'none', random: true }
+        number: { value: 100 },
+        color: { value: ['#00ffff', '#aa00ff', '#ffd700'] },
+        shape: { type: 'circle' },
+        opacity: { value: 0.6, random: true },
+        size: { value: 4, random: true },
+        line_linked: { enable: true, distance: 120, color: '#00ffff', opacity: 0.3, width: 1.5 },
+        move: { speed: 3 }
       },
       interactivity: {
-        detect_on: 'canvas',
-        events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
-        modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
-      },
-      retina_detect: true
-    });
-
-    // Three.js 3D Cyber Globe
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.getElementById('hero-canvas').appendChild(renderer.domElement);
-
-    const geometry = new THREE.SphereGeometry(2, 32, 32);
-    const material = new THREE.ShaderMaterial({
-      vertexShader: `
-        varying vec2 vUv;
-        varying vec3 vPosition;
-        void main() {
-          vUv = uv;
-          vPosition = position;
-          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-        }
-      `,
-      fragmentShader: `
-        uniform float time;
-        varying vec2 vUv;
-        varying vec3 vPosition;
-        void main() {
-          vec2 uv = vUv;
-          float dist = distance(uv, vec2(0.5));
-          float glow = 1.0 / (1.0 + dist * 10.0);
-          vec3 color = mix(vec3(0.4, 0.7, 1.0), vec3(1.0, 0.8, 0.2), sin(time * 2.0 + dist * 10.0) * 0.5 + 0.5);
-          gl_FragColor = vec4(color * glow, 0.8);
-        }
-      `,
-      uniforms: { time: { value: 0 } },
-      transparent: true,
-      side: THREE.DoubleSide
-    });
-    const globe = new THREE.Mesh(geometry, material);
-    scene.add(globe);
-
-    camera.position.z = 5;
-    function animate() {
-      requestAnimationFrame(animate);
-      globe.rotation.y += 0.005;
-      globe.rotation.x += 0.002;
-      material.uniforms.time.value += 0.02;
-      renderer.render(scene, camera);
-    }
-    animate();
-
-    window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-
-    // GSAP Master Timeline
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.from('.fade-in-up', {
-      scrollTrigger: { trigger: '.container', start: 'top 85%' },
-      y: 80, opacity: 0, duration: 1.2, stagger: 0.3, ease: 'power3.out'
-    });
-
-    // Navbar glow
-    window.addEventListener('scroll', () => {
-      const navbar = document.querySelector('nav');
-      const scroll = window.scrollY;
-      navbar.style.background = `rgba(0,0,0,${Math.min(0.9, scroll / 200)})`;
-      navbar.style.backdropFilter = scroll > 50 ? 'blur(30px)' : 'blur(20px)';
-    });
-
-    // Progress bars
-    ScrollTrigger.create({
-      trigger: '#skills',
-      start: 'top 80%',
-      onEnter: () => {
-        document.querySelectorAll('.progress-bar').forEach((bar, i) => {
-          gsap.to(bar, {
-            width: bar.dataset.width || '0%',
-            duration: 2.5,
-            delay: i * 0.1,
-            ease: 'power2.out'
-          });
-        });
+        events: { onhover: { enable: true, mode: 'bubble' } },
+        modes: { bubble: { distance: 200, size: 6, opacity: 0.8 } }
       }
     });
 
-    // Lottie animations (placeholder cyber icons - replace with real Lottie JSON URLs)
-    lottie.loadAnimation({
-      container: document.getElementById('about-lottie'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'https://assets1.lottiefiles.com/packages/lf20_y7jpxl.json' // Cyber shield example
-    });
-    lottie.loadAnimation({
-      container: document.getElementById('cyber-lottie'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'https://assets4.lottiefiles.com/packages/lf20_jgjunqmr.json' // Lock
-    });
-    // Add more Lottie for OSINT, AI, etc. with appropriate paths
+    // Typing effect
+    const title = 'CYBER NOIR EMPIRE';
+    let i = 0;
+    const typeWriter = () => {
+      if (i < title.length) {
+        document.getElementById('hero-title').textContent = title.slice(0, i + 1);
+        i++;
+        setTimeout(typeWriter, 150);
+      }
+    };
+    setTimeout(typeWriter, 1000);
 
-    // Form submit
+    // GSAP & ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.holo-card', {
+      scrollTrigger: { trigger: '.container', start: 'top 85%' },
+      y: 60, opacity: 0, duration: 1, stagger: 0.2, ease: 'power3.out'
+    });
+
+    ScrollTrigger.create({
+      trigger: '#skills',
+      start: 'top 80%',
+      onEnter: () => document.querySelectorAll('.skill-fill').forEach((fill, idx) => {
+        gsap.to(fill, { width: fill.dataset.width, duration: 2, delay: idx * 0.1 });
+      })
+    });
+
+    // Testimonial carousel
+    let currentTest = 0;
+    const tests = document.querySelectorAll('.testimonial');
+    setInterval(() => {
+      tests[currentTest].classList.remove('active');
+      currentTest = (currentTest + 1) % tests.length;
+      tests[currentTest].classList.add('active');
+    }, 4000);
+
+    // Form
     document.querySelector('form').addEventListener('submit', e => {
       e.preventDefault();
-      gsap.to('form', { scale: 0.95, duration: 0.1, yoyo: true, repeat: 1 });
-      alert('Transmission secured. Alliance initiated.');
+      gsap.to('.submit-btn', { scale: 0.95, duration: 0.1, repeat: 1, yoyo: true });
+      // Simulate send
+      setTimeout(() => alert('Directive transmitted. Await response.'), 500);
     });
 
-    // Parallax floating elements
-    gsap.to('.float', {
-      y: -30,
-      duration: 4,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power2.inOut'
+    // Navbar scroll
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const scroll = window.scrollY;
+      const nav = document.querySelector('nav');
+      if (scroll > lastScroll && scroll > 100) {
+        gsap.to(nav, { y: '-100%', duration: 0.3 });
+      } else {
+        gsap.to(nav, { y: '0%', duration: 0.3 });
+      }
+      lastScroll = scroll;
     });
   </script>
 </body>
